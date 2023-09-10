@@ -16,6 +16,6 @@ const $ = (e, options) => {
  * Return all children of a parent node.
  * @returns {Array<HTMLElement>}
  */
-Element.prototype.nodes = function() {
+Element.prototype.nodes = function () {
   return Array.prototype.slice.call(this.children);
 };
