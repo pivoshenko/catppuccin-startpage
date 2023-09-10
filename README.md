@@ -18,7 +18,6 @@
 - [Configuration Dialog](#configuration-dialog)
 - [Search Dialog](#search-dialog)
 
-
 ## Overview
 
 This start page is based on the [dawn](https://github.com/b-coimbra/dawn), which has even more functionality.
