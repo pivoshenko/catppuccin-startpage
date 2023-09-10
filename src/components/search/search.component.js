@@ -1,9 +1,9 @@
 class Search extends Component {
   refs = {
-    search: '#search',
+    search: "#search",
     input: '#search input[type="text"]',
-    engines: '.search-engines',
-    close: '.close'
+    engines: ".search-engines",
+    close: ".close",
   };
 
   constructor() {
@@ -21,7 +21,7 @@ class Search extends Component {
           justify-content: center;
           width: calc(100% - 2px);
           height: 100%;
-          background: rgb(24 24 29 / 80%);
+          background: rgb(30 32 48 / 80%);
           z-index: 99;
           visibility: hidden;
           top: -100%;
@@ -43,28 +43,28 @@ class Search extends Component {
           border: 0;
           outline: 0;
           width: 100%;
-          box-shadow: inset 0 -2px #737373;
+          box-shadow: inset 0 -2px #1e2030;
           padding: .5em 0;
           background: none;
           font: 500 22px 'Roboto', sans-serif;
           letter-spacing: 1px;
-          color: #d4be98;
+          color: #cad3f5;
       }
 
       #search input:focus {
-          box-shadow: inset 0 -2px #d4be98;
+          box-shadow: inset 0 -2px #1e2030;
       }
 
       #search input::selection {
-          background: #e78a4e;
-          color: #32302f;
+        background: #6e738d;
+        color: #cad3f5;
       }
 
       #search .close {
           background: 0;
           border: 0;
           outline: 0;
-          color: #d4be98;
+          color: #cad3f5;
           position: absolute;
           right: 0;
           cursor: pointer;
@@ -77,7 +77,7 @@ class Search extends Component {
 
       .search-engines {
           list-style: none;
-          color: rgba(212, 190, 152, 0.5);
+          color: rgba(202, 211, 245, 0.5);
           display: flex;
           padding: 0;
           top: 50px;
@@ -97,17 +97,14 @@ class Search extends Component {
       }
 
       .search-engines li.active {
-          color: #d4be98;
+          color: #cad3f5;
           font-weight: 700;
       }
     `;
   }
 
   imports() {
-    return [
-      this.resources.fonts.roboto,
-      this.resources.icons.material
-    ];
+    return [this.resources.fonts.roboto, this.resources.icons.material];
   }
 
   template() {
@@ -128,41 +125,38 @@ class Search extends Component {
   }
 
   activate() {
-    this.refs.search.classList.add('active');
+    this.refs.search.classList.add("active");
     this.refs.input.scrollIntoView();
     setTimeout(() => this.refs.input.focus(), 100);
   }
 
   deactivate() {
-    this.refs.search.classList.remove('active');
+    this.refs.search.classList.remove("active");
   }
 
   handleSearch(event) {
     const { target, key } = event;
 
-    let args = target.value.split(' ');
+    let args = target.value.split(" ");
     let prefix = args[0];
-    let defaultEngine = this.engines['g'][0];
+    let defaultEngine = this.engines["g"][0];
     let engine = defaultEngine;
 
-    this.refs.engines.childNodes.forEach(engine => {
-      if (prefix === engine.firstChild.innerHTML)
-        engine.classList.add('active');
-      else
-        engine.classList.remove('active');
+    this.refs.engines.childNodes.forEach((engine) => {
+      if (prefix === engine.firstChild.innerHTML) engine.classList.add("active");
+      else engine.classList.remove("active");
     });
 
-    if (key === 'Enter') {
-      if (prefix.indexOf('!') === 0) {
+    if (key === "Enter") {
+      if (prefix.indexOf("!") === 0) {
         engine = this.engines[prefix.substr(1)][0];
         args = args.slice(1);
       }
 
-      window.location = engine + encodeURI(args.join(' '));
+      window.location = engine + encodeURI(args.join(" "));
     }
 
-    if (key === 'Escape')
-      this.deactivate();
+    if (key === "Escape") this.deactivate();
   }
 
   setEvents() {
