@@ -1,31 +1,31 @@
 class Weather extends Component {
   refs = {
-    temperature: '.weather-temperature-value',
-    condition: '.weather-condition-icon',
-    scale: '.weather-temperature-scale'
+    temperature: ".weather-temperature-value",
+    condition: ".weather-condition-icon",
+    scale: ".weather-temperature-scale",
   };
 
   forecasts = [
     {
-      conditions: ['clouds', 'mist', 'haze', 'smoke'],
-      icon: 'cloud_queue',
-      color: 'cloudy'
+      conditions: ["clouds", "mist", "haze", "smoke"],
+      icon: "cloud_queue",
+      color: "cloudy",
     },
     {
-      conditions: ['drizzle', 'snow', 'rain'],
-      icon: 'opacity',
-      color: 'cloudy'
+      conditions: ["drizzle", "snow", "rain"],
+      icon: "opacity",
+      color: "cloudy",
     },
     {
-      conditions: ['clear'],
-      icon: 'wb_sunny',
-      color: 'sunny'
+      conditions: ["clear"],
+      icon: "wb_sunny",
+      color: "sunny",
     },
     {
-      conditions: ['thunderstorm'],
-      icon: 'bolt',
-      color: 'cloudy'
-    }
+      conditions: ["thunderstorm"],
+      icon: "bolt",
+      color: "cloudy",
+    },
   ];
 
   location;
@@ -48,10 +48,7 @@ class Weather extends Component {
   }
 
   imports() {
-    return [
-      this.resources.icons.material,
-      this.resources.fonts.roboto
-    ];
+    return [this.resources.icons.material, this.resources.fonts.roboto];
   }
 
   style() {
@@ -65,7 +62,7 @@ class Weather extends Component {
 
       .weather-temperature {
           font: 300 9pt 'Roboto', sans-serif;
-          color: #d4be98;
+          color: #cad3f5;
           white-space: nowrap;
           display: flex;
           align-items: center;
@@ -97,11 +94,11 @@ class Weather extends Component {
       }
 
       .weather-condition-icon.sunny {
-          color: #e78a4e;
+          color: #eed49f;
       }
 
       .weather-condition-icon.cloudy {
-          color: #7daea3;
+          color: #8aadf4;
       }
     `;
   }
@@ -116,24 +113,27 @@ class Weather extends Component {
         </p>`;
   }
 
-  toC(f) { return Math.round((f - 32) * 5 / 9); }
+  toC(f) {
+    return Math.round(((f - 32) * 5) / 9);
+  }
 
-  toF(c) { return Math.round(c * 9 / 5 + 32); }
+  toF(c) {
+    return Math.round((c * 9) / 5 + 32);
+  }
 
   swapScale() {
-    this.temperatureScale = this.temperatureScale === 'C' ? 'F' : 'C';
+    this.temperatureScale = this.temperatureScale === "C" ? "F" : "C";
 
     CONFIG.temperature = {
       ...CONFIG.temperature,
-      scale: this.temperatureScale
+      scale: this.temperatureScale,
     };
 
     this.setTemperature();
   }
 
   convertScale(temperature) {
-    if (this.temperatureScale === 'F')
-      return this.toF(temperature);
+    if (this.temperatureScale === "F") return this.toF(temperature);
 
     return temperature;
   }
@@ -154,9 +154,7 @@ class Weather extends Component {
   }
 
   getForecast(condition) {
-    for (const forecast of this.forecasts)
-      if (forecast.conditions.includes(condition))
-        return forecast;
+    for (const forecast of this.forecasts) if (forecast.conditions.includes(condition)) return forecast;
 
     return this.forecasts[0];
   }
