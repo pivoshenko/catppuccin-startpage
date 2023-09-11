@@ -25,11 +25,80 @@ const default_config = {
   openLastVisitedTab: true,
   tabs: [
     {
+      name: "myself",
+      background_url: "src/img/banners/cbg-9.gif",
+      categories: [
+        {
+          name: "notes",
+          links: [
+            {
+              name: "raindrop",
+              url: "hthttps://app.raindrop.io",
+              icon: "droplet-bolt",
+              icon_color: "#a6da95",
+            },
+            {
+              name: "pocket",
+              url: "https://getpocket.com",
+              icon: "brand-pocket",
+              icon_color: "#f5a97f",
+            },
+          ],
+        },
+        {
+          name: "stuff",
+          links: [
+            {
+              name: "gmail",
+              url: "https://mail.google.com",
+              icon: "brand-gmail",
+              icon_color: "#a6da95",
+            },
+            {
+              name: "calendar",
+              url: "https://calendar.google.com",
+              icon: "calendar-filled",
+              icon_color: "#f5a97f",
+            },
+            {
+              name: "todoist",
+              url: "https://todoist.com/app/today",
+              icon: "clipboard-check",
+              icon_color: "#ed8796",
+            },
+          ],
+        },
+        {
+          name: "news",
+          links: [
+            {
+              name: "ґрунт",
+              url: "https://grnt.media",
+              icon: "eye-search",
+              icon_color: "#a6da95",
+            },
+            {
+              name: "уп",
+              url: "https://www.pravda.com.ua",
+              icon: "news",
+              icon_color: "#f5a97f",
+            },
+            {
+              name: "mil.in.ua",
+              url: "https://mil.in.ua/uk/",
+              icon: "badge-filled",
+              icon_color: "#ed8796",
+            },
+          ],
+        },
+      ],
+    },
+    {
       name: "dev",
       background_url: "src/img/banners/cbg-8.gif",
       categories: [
         {
-          name: "repositories",
+          name: "resources",
           links: [
             {
               name: "github",
@@ -38,21 +107,16 @@ const default_config = {
               icon_color: "#a6da95",
             },
             {
-              name: "gitlab",
-              url: "https://gitlab.com/",
-              icon: "brand-gitlab",
+              name: "neptune",
+              url: "https://ui.neptune.ai",
+              icon: "circle-triangle",
               icon_color: "#f5a97f",
             },
-          ],
-        },
-        {
-          name: "resources",
-          links: [
             {
-              name: "vscode",
-              url: "https://vscode.dev",
-              icon: "brand-vscode",
-              icon_color: "#a6da95",
+              name: "musicForProgramming();",
+              url: "https://musicforprogramming.net/sixty/",
+              icon: "binary-tree",
+              icon_color: "#ed8796",
             },
           ],
         },
@@ -72,16 +136,138 @@ const default_config = {
               icon_color: "#f5a97f",
             },
             {
-              name: "tryhackme",
-              url: "https://tryhackme.com/dashboard",
-              icon: "brand-onedrive",
-              icon_color: "#ea6962",
+              name: "stackoverflow",
+              url: "https://stackoverflow.com",
+              icon: "brand-stackoverflow",
+              icon_color: "#ed8796",
             },
             {
-              name: "hackerrank",
-              url: "https://www.hackerrank.com/dashboard",
-              icon: "code-asterix",
-              icon_color: "#a9b665",
+              name: "wakatime",
+              url: "https://wakatime.com/dashboard",
+              icon: "24-hours",
+              icon_color: "#8bd5ca",
+            },
+          ],
+        },
+        {
+          name: "blogs",
+          links: [
+            {
+              name: "dou",
+              url: "https://dou.ua",
+              icon: "brand-prisma",
+              icon_color: "#a6da95",
+            },
+            {
+              name: "medium",
+              url: "https://medium.com",
+              icon: "brand-medium",
+              icon_color: "#f5a97f",
+            },
+            {
+              name: "uber",
+              url: "https://eng.uber.com/category/articles",
+              icon: "brand-uber",
+              icon_color: "#ed8796",
+            },
+            {
+              name: "hackernews",
+              url: "https://news.ycombinator.com",
+              icon: "brand-redhat",
+              icon_color: "#8bd5ca",
+            },
+            {
+              name: "reddit",
+              url: "https://www.reddit.com",
+              icon: "brand-reddit",
+              icon_color: "#eed49f",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      name: "chi ll",
+      background_url: "src/img/banners/cbg-2.gif",
+      categories: [
+        {
+          name: "social medias",
+          links: [
+            {
+              name: "telegram",
+              url: "https://web.telegram.org",
+              icon: "brand-telegram",
+              icon_color: "#a6da95",
+            },
+            {
+              name: "twitter",
+              url: "https://twitter.com/volopivoshenko",
+              icon: "brand-x",
+              icon_color: "#f5a97f",
+            },
+            {
+              name: "facebook",
+              url: "https://www.facebook.com",
+              icon: "brand-facebook",
+              icon_color: "#ed8796",
+            },
+          ],
+        },
+        {
+          name: "games",
+          links: [
+            {
+              name: "steam",
+              url: "https://store.steampowered.com",
+              icon: "brand-steam",
+              icon_color: "#a6da95",
+            },
+            {
+              name: "epicgames",
+              url: "https://store.epicgames.com",
+              icon: "brand-fortnite",
+              icon_color: "#f5a97f",
+            },
+            {
+              name: "nintendo",
+              url: "https://store.nintendo.co.uk",
+              icon: "device-nintendo",
+              icon_color: "#ed8796",
+            },
+          ],
+        },
+        {
+          name: "video",
+          links: [
+            {
+              name: "youtube",
+              url: "https://www.youtube.com",
+              icon: "brand-youtube",
+              icon_color: "#a6da95",
+            },
+            {
+              name: "patreon",
+              url: "https://www.patreon.com",
+              icon: "brand-patreon",
+              icon_color: "#f5a97f",
+            },
+            {
+              name: "kyivstar",
+              url: "https://tv.kyivstar.ua",
+              icon: "star-filled",
+              icon_color: "#ed8796",
+            },
+            {
+              name: "uakino",
+              url: "https://uakino.club",
+              icon: "polaroid",
+              icon_color: "#8bd5ca",
+            },
+            {
+              name: "rezka",
+              url: "https://rezka.ag",
+              icon: "brand-hbo",
+              icon_color: "#f5bde6",
             },
           ],
         },
