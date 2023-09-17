@@ -1,6 +1,6 @@
 <div align="center">
     <a href="https://github.com/volopivoshenko/catppuccin-startpage">
-        <img alt="logo" src="https://github.com/volopivoshenko/catppuccin-startpage/blob/main/docs/static/assets/page.png?raw=True" height=200>
+        <img alt="logo" src="https://github.com/volopivoshenko/catppuccin-startpage/blob/main/docs/static/assets/page.png?raw=True" height=400>
     </a>
 </div>
 <p align="center">
