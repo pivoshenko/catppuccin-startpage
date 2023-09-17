@@ -20,16 +20,15 @@
 
 ## Overview
 
-This start page is based on the [dawn](https://github.com/b-coimbra/dawn), which has even more functionality.
+This start page is based on the [dawn](https://github.com/b-coimbra/dawn) and [tartarus-startpage](https://github.com/AllJavi/tartarus-startpage/tree/master), which has even more functionality.
 
 ## Keybindings
 
-| Hotkey                                                         | Action              |
-| -------------------------------------------------------------- | ------------------- |
-| <kbd>Numrow</kbd> \| <kbd>MouseWheel</kbd> \| <kbd>Click</kbd> | Switch tabs         |
-| <kbd>s</kbd>                                                   | Search Dialog       |
-| <kbd>q</kbd>                                                   | Config Dialog (new) |
-| <kbd>Esc</kbd>                                                 | Close Dialogs       |
+| Hotkey                                                         | Action        |
+| -------------------------------------------------------------- | ------------- |
+| <kbd>Numrow</kbd> \| <kbd>MouseWheel</kbd> \| <kbd>Click</kbd> | Switch tabs   |
+| <kbd>s</kbd>                                                   | Search Dialog |
+| <kbd>Esc</kbd>                                                 | Close Dialogs |
 
 ## Configuration Dialog
 
