@@ -1,3 +1,8 @@
+<div align="center">
+    <a href="https://github.com/volopivoshenko/catppuccin-startpage">
+        <img alt="logo" src="https://github.com/volopivoshenko/catppuccin-startpage/blob/main/docs/static/assets/page.png?raw=True" height=200>
+    </a>
+</div>
 <p align="center">
     <a href="https://www.buymeacoffee.com/volopivoshenko" target="_blank">
         <img alt="buymeacoffee" src="https://img.shields.io/badge/buy_me_-a_coffee-ff6964?logo=buymeacoffee">
