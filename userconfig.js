@@ -257,18 +257,6 @@ const default_config = {
               icon: "star-filled",
               icon_color: "#ed8796",
             },
-            {
-              name: "uakino",
-              url: "https://uakino.club",
-              icon: "polaroid",
-              icon_color: "#8bd5ca",
-            },
-            {
-              name: "rezka",
-              url: "https://rezka.ag",
-              icon: "brand-hbo",
-              icon_color: "#f5bde6",
-            },
           ],
         },
       ],
