@@ -33,7 +33,7 @@ const default_config = {
           links: [
             {
               name: "raindrop",
-              url: "hthttps://app.raindrop.io",
+              url: "https://app.raindrop.io",
               icon: "droplet-bolt",
               icon_color: "#a6da95",
             },
