@@ -61,8 +61,8 @@ const default_config = {
               icon_color: "#f5a97f",
             },
             {
-              name: "todoist",
-              url: "https://todoist.com/app/today",
+              name: "xtiles",
+              url: "https://xtiles.app/workspace/personal",
               icon: "clipboard-check",
               icon_color: "#ed8796",
             },
