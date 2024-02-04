@@ -217,6 +217,12 @@ const default_config = {
           name: "games",
           links: [
             {
+              name: "GG",
+              url: "https://ggapp.io/volopivoshenko",
+              icon: "device-gamepad",
+              icon_color: "#89b4fa",
+            },
+            {
               name: "steam",
               url: "https://store.steampowered.com",
               icon: "brand-steam",
@@ -239,6 +245,12 @@ const default_config = {
         {
           name: "video",
           links: [
+            {
+              name: "anilist",
+              url: "https://anilist.co/home",
+              icon: "brand-funimation",
+              icon_color: "#89b4fa",
+            },
             {
               name: "youtube",
               url: "https://www.youtube.com",
