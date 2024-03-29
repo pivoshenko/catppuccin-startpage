@@ -37,6 +37,6 @@ Add any other context about the problem here.
 
 [gist]: https://gist.github.com
 
-[issues]: https://github.com/volopivoshenko/catppuccin-startpage/issues
+[issues]: https://github.com/pivoshenko/catppuccin-startpage/issues
 
-[latest]: https://github.com/volopivoshenko/catppuccin-startpage/releases/latest
+[latest]: https://github.com/pivoshenko/catppuccin-startpage/releases/latest

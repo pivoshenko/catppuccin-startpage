@@ -25,6 +25,6 @@ A clear and concise description of any alternative solutions or features you've 
 
 Add any other context or screenshots about the feature request here.
 
-[documentation]: https://github.com/volopivoshenko/catppuccin-startpage
+[documentation]: https://github.com/pivoshenko/catppuccin-startpage
 
-[issues]: https://github.com/volopivoshenko/catppuccin-startpage/issues
+[issues]: https://github.com/pivoshenko/catppuccin-startpage/issues
