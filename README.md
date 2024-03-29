@@ -2,7 +2,8 @@
 
 <div align="center">
     <a href="https://github.com/pivoshenko/catppuccin-startpage">
-        <img alt="logo" src="docs/assets/page.png?raw=True" height=400>
+        <!-- <img alt="logo" src="docs/assets/page.png?raw=True" height=400> -->
+        <video src="docs/assets/preview.mp4" controls></video>
     </a>
 </div>
 <p align="center">
