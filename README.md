@@ -1,10 +1,12 @@
+## catppuccin startpage
+
 <div align="center">
-    <a href="https://github.com/volopivoshenko/catppuccin-startpage">
-        <img alt="logo" src="https://github.com/volopivoshenko/catppuccin-startpage/blob/main/docs/static/assets/page.png?raw=True" height=400>
+    <a href="https://github.com/pivoshenko/catppuccin-startpage">
+        <img alt="logo" src="docs/assets/page.png?raw=True" height=400>
     </a>
 </div>
 <p align="center">
-    <a href="https://www.buymeacoffee.com/volopivoshenko" target="_blank">
+    <a href="https://www.buymeacoffee.com/pivoshenko" target="_blank">
         <img alt="buymeacoffee" src="https://img.shields.io/badge/buy_me_-a_coffee-ff6964?logo=buymeacoffee">
     </a>
     <a href="https://stand-with-ukraine.pp.ua/">
@@ -18,43 +20,16 @@
     </a>
 </p>
 
-- [🔮 Overview](#-overview)
-- [️⌨️ Keybindings](#️️-keybindings)
-- [⚙️ Configuration Dialog](#️-configuration-dialog)
-- [🔍 Search Dialog](#-search-dialog)
-- [🖼 Available banners](#-available-banners)
+## Overview
 
-## 🔮 Overview
+This start page is based on the [dawn] and [tartarus-startpage], which has even more functionality.
+I've tweaked the page's style to match [catppuccin] palette and my [dotfiles].
 
-This start page is based on the [dawn](https://github.com/b-coimbra/dawn) and [tartarus-startpage](https://github.com/AllJavi/tartarus-startpage), which has even more functionality.
-I've tweaked the page's style a bit to match [catppuccin] style.
+### Fonts
 
-## ️⌨️ Keybindings
+If you want to reduce the loading time of the icons, you could install the [icon font](src/fonts) locally and activate the option `"localIcons": true` in the config to disable the remote styles.
 
-| Hotkey                                                         | Action        |
-| -------------------------------------------------------------- | ------------- |
-| <kbd>Numrow</kbd> \| <kbd>MouseWheel</kbd> \| <kbd>Click</kbd> | Switch tabs   |
-| <kbd>s</kbd>                                                   | Search Dialog |
-| <kbd>Esc</kbd>                                                 | Close Dialogs |
-
-## ⚙️ Configuration Dialog
-
-The default configuration file is [userconfig.js](userconfig.js), but you can change it in the configuration dialog. You can find more information about how the file works in the [original repository](https://github.com/b-coimbra/dawn). The available components are tabs, a clock, and weather.
-
-Additionally, there's a new option called `fastlink` to set the link of the Pokéball button.
-
-## 🔍 Search Dialog
-
-The search dialog allows you to display a search bar with various search engines defined in the configuration. To select each one, you simply need to prefix the query with the corresponding `!<id>`.
-
-By default, the defined search engines are:
-- `!g`: google
-- `!d`: duckduckgo
-- `!y`: youtube
-- `!r`: reddit
-- `!p`: pinterest
-
-## 🖼 Available banners
+## Available banners
 
 | cbg-2                                           | cbg-3                                           | cbg-4                                           | cbg-5                                           |
 | ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
@@ -72,3 +47,4 @@ By default, the defined search engines are:
 [dawn]: https://github.com/b-coimbra/dawn
 [catppuccin]: https://github.com/catppuccin/catppuccin
 [tartarus-startpage]:https://github.com/AllJavi/tartarus-startpage
+[dotfiles]: https://github.com/pivoshenko/dotfiles
