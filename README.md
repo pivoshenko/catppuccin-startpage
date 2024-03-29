@@ -22,10 +22,17 @@
 
 ## Overview
 
-🐱✨ Aesthetic and clean startpage in **Catppuccin** style, hosted on GitHub Pages.
-
+Aesthetic and clean startpage in **Catppuccin** style, hosted on GitHub Pages.
 This start page is based on the [dawn] and [tartarus-startpage], which has even more functionality.
 I've tweaked the page's style to match [catppuccin] palette and my [dotfiles].
+
+### Main principles
+
+- Minimalism in everything
+- Consistency
+- Simplicity
+- One style
+- Reduced visual noise, only important things should be shown
 
 ### Fonts
 
