@@ -1,10 +1,7 @@
 ## catppuccin startpage
 
-<div align="center">
-    <a href="https://github.com/pivoshenko/catppuccin-startpage">
-        <!-- <img alt="logo" src="docs/assets/page.png?raw=True" height=400> -->
-        <video src="docs/assets/preview.mp4" controls></video>
-    </a>
+https://github.com/pivoshenko/catppuccin-startpage/assets/40499728/d96c8bd6-168e-408f-b4f0-0e339569c696
+
 </div>
 <p align="center">
     <a href="https://www.buymeacoffee.com/pivoshenko" target="_blank">
