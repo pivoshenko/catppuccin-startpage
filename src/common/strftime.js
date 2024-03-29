@@ -3,6 +3,14 @@
 | STRFTIME |
 +----------+
 Author: https://github.com/b-coimbra
+Description:
+silly strftime function implementation in js without the percentage notation.
+based off https://strftime.org
+
+USAGE:
+new Date().strftime("H:M p - A") => 21:32 AM - Thursday
+new Date().strftime("m/b/Y")     => 1/Jan/2018
+new Date().strftime("do B Y")    => 18th January 2018
 */
 
 Date.prototype.strftime = function (format = "c") {
