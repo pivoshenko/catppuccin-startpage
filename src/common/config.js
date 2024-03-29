@@ -7,25 +7,16 @@ class Config {
     },
     clock: {
       format: "h:i p",
-      iconColor: "#ff7b95",
-    },
-    search: {
-      engines: {
-        g: ["https://google.com/search?q=", "Google"],
-        y: ["https://youtube.com/results?search_query=", "Youtube"],
-      },
+      iconColor: "#f38ba8",
     },
     disabled: [],
     openLastVisitedTab: false,
     tabs: [],
-    keybindings: {
-      s: "search-bar",
-    },
   };
 
   config;
 
-  constructor(config) {
+  constructor (config) {
     this.config = config;
     this.storage = new Storage("config");
 
@@ -36,7 +27,8 @@ class Config {
     return new Proxy(this, {
       ...this,
       __proto__: this.__proto__,
-      set: (target, prop, value) => this.settingUpdatedCallback(target, prop, value),
+      set: (target, prop, value) =>
+        this.settingUpdatedCallback(target, prop, value)
     });
   }
 
@@ -60,10 +52,14 @@ class Config {
    * @returns {void}
    */
   autoConfig() {
-    Object.keys(this.defaults).forEach((setting) => {
-      if (this.canOverrideStorage(setting)) this[setting] = this.config[setting];
-      else if (this.storage.hasValue(setting)) this[setting] = this.storage.get(setting);
-      else this[setting] = this.defaults[setting];
+    Object.keys(this.defaults).forEach(setting => {
+      if (this.canOverrideStorage(setting))
+        this[setting] = this.config[setting];
+      else
+        if (this.storage.hasValue(setting))
+          this[setting] = this.storage.get(setting);
+        else
+          this[setting] = this.defaults[setting];
     });
   }
 
@@ -92,7 +88,8 @@ class Config {
     document.onkeypress = ({ key }) => {
       if (document.activeElement !== document.body) return;
 
-      if (Object.keys(this.config.keybindings).includes(key)) Actions.activate(this.config.keybindings[key]);
+      if (Object.keys(this.config.keybindings).includes(key))
+        Actions.activate(this.config.keybindings[key]);
     };
   }
 

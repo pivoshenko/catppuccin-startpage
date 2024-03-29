@@ -17,12 +17,12 @@ class Clock extends Component {
         .clock-time {
             white-space: nowrap;
             font: 300 9pt 'Roboto', sans-serif;
-            color: #cad3f5;
+            color: #cdd6f4;
             letter-spacing: .5px;
         }
 
         .clock-icon {
-            color: #ed8796;
+            color: #f38ba8;
             font-size: 10pt;
             margin-right: 10px;
         }
