@@ -1,22 +1,19 @@
-## catppuccin startpage
+<h3 align="center">
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
+  Catppuccin <a href="https://github.com/pivoshenko/catppuccin-startpage">Startpage</a>
+  <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
+</h3>
+
+<p align="center">
+  <a href="https://github.com/catppuccin/bento/stargazers"><img src="https://img.shields.io/github/stars/catppuccin/bento?colorA=363a4f&colorB=b7bdf8&style=for-the-badge"></a>
+  <a href="https://github.com/catppuccin/bento/issues"><img src="https://img.shields.io/github/issues/catppuccin/bento?colorA=363a4f&colorB=f5a97f&style=for-the-badge"></a>
+  <a href="https://github.com/catppuccin/bento/contributors"><img src="https://img.shields.io/github/contributors/catppuccin/bento?colorA=363a4f&colorB=a6da95&style=for-the-badge"></a>
+</p>
 
 https://github.com/pivoshenko/catppuccin-startpage/assets/40499728/d96c8bd6-168e-408f-b4f0-0e339569c696
 
-</div>
-<p align="center">
-    <a href="https://www.buymeacoffee.com/pivoshenko" target="_blank">
-        <img alt="buymeacoffee" src="https://img.shields.io/badge/buy_me_-a_coffee-ff6964?logo=buymeacoffee">
-    </a>
-    <a href="https://stand-with-ukraine.pp.ua/">
-        <img alt="standwithukraine" src="https://img.shields.io/badge/Support-Ukraine-FFD500?style=flat&labelColor=005BBB">
-    </a>
-    <a href="https://stand-with-ukraine.pp.ua">
-        <img alt="standwithukraine" src="https://img.shields.io/badge/made_in-Ukraine-ffd700.svg?labelColor=0057b7">
-    </a>
-    <a href="https://wakatime.com/badge/user/9862508c-0a86-427a-929c-46186f2d191a/project/6f149575-e390-48f9-9b7a-fd557bda4a6a">
-        <img src="https://wakatime.com/badge/user/9862508c-0a86-427a-929c-46186f2d191a/project/6f149575-e390-48f9-9b7a-fd557bda4a6a.svg" alt="wakatime">
-    </a>
-</p>
+> **Note**: A live demo can be found [here](https://pivoshenko.github.io/catppuccin-startpage)
 
 ## Overview
 
