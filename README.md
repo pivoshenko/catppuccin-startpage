@@ -42,6 +42,7 @@ I've tweaked the page's style to match [Catppuccin] palette and my [`dotfiles`].
 
 > [!TIP]
 > You can find icons for your bookmarks using [`tabler-icons`]
+>
 > If you want to reduce the loading time of the icons, you could install the icon [font] locally and activate the option `"localIcons": true` in the config to disable the remote styles
 
 ### Available banners
