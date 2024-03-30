@@ -13,7 +13,8 @@
 
 https://github.com/pivoshenko/catppuccin-startpage/assets/40499728/d96c8bd6-168e-408f-b4f0-0e339569c696
 
-> **Note**: A live demo can be found [here](https://pivoshenko.github.io/catppuccin-startpage)
+> [!NOTE]
+>  A live demo can be found [here](https://pivoshenko.github.io/catppuccin-startpage)
 
 ## Overview
 
@@ -35,15 +36,13 @@ I've tweaked the page's style to match [Catppuccin] palette and my [`dotfiles`].
 3. Copy the assets and configs from `pivoshenko-catppuccin-startpage` to your repository: `cp pivoshenko-catppuccin-startpage/* <YOUR REPOSITORY>`
 4. Remove `.github` directory as it contains only PR templates, issue labels etc
 5. Update [`userconfig.js`]:
-   1. Set your location for the weather widget
-   2. Update the number of pages and their banners
-   3. Update bookmarks and quick links for the one you are using the most :3
+   - Set your location for the weather widget
+   - Update the number of pages and their banners
+   - Update bookmarks and quick links for the one you are using the most :3
 
 > [!TIP]
 > You can find icons for your bookmarks using [`tabler-icons`]
-
-> [!TIP]
-> If you want to reduce the loading time of the icons, you could install the icon [font] locally and activate the option `"localIcons": true` in the config to disable the remote styles.
+> If you want to reduce the loading time of the icons, you could install the icon [font] locally and activate the option `"localIcons": true` in the config to disable the remote styles
 
 ### Available banners
 
