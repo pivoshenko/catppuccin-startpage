@@ -32,9 +32,19 @@ I've tweaked the page's style to match [Catppuccin] palette and my [`dotfiles`].
 ## Usage
 
 1. Create your own repository for the startpage and clone it
-2. Clone this repository with: `git clone https://github.com/pivoshenko/catppuccin-startpage.git pivoshenko-catppuccin-startpage`
-3. Copy the assets and configs from `pivoshenko-catppuccin-startpage` to your repository: `cp pivoshenko-catppuccin-startpage/* <YOUR REPOSITORY>`
-4. Remove `.github` directory as it contains only PR templates, issue labels etc
+2. Clone this repository with:
+
+```shell
+git clone https://github.com/pivoshenko/catppuccin-startpage.git pivoshenko-catppuccin-startpage
+```
+
+3. Copy the assets and configs from `pivoshenko-catppuccin-startpage` to your repository:
+
+```shell
+cp pivoshenko-catppuccin-startpage/* <YOUR REPOSITORY>
+```
+
+4. Remove `.github` directory as it contains only PR templates, issue labels etc that are linked to this repository
 5. Update [`userconfig.js`]:
    - Set your location for the weather widget
    - Update the number of pages and their banners
