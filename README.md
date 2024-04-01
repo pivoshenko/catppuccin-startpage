@@ -55,6 +55,19 @@ cp pivoshenko-catppuccin-startpage/* <YOUR REPOSITORY>
 >
 > If you want to reduce the loading time of the icons, you could install the icon [font] locally and activate the option `"localIcons": true` in the config to disable the remote styles
 
+#### As Homepage
+
+- Click the menu button and select `Options/Preferences`
+- Click the home panel
+- Click the menu next to the homepage and new windows and choose to show custom URLs and add your Github Pages link
+
+#### As New Tab
+
+You can use different Add-ons/Extensions for it
+- If you use Firefox: [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/?src=search) and make sure you enable "Force links to open in the top frame (experimental)" in the extension's preferences page
+- If you use Chromium (Brave, Chrome): [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia)
+
+
 ### Available banners
 
 | cbg-2                                           | cbg-3                                           | cbg-4                                           | cbg-5                                           |
