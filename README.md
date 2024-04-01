@@ -59,7 +59,7 @@ cp pivoshenko-catppuccin-startpage/* <YOUR REPOSITORY>
 
 - Click the menu button and select `Options/Preferences`
 - Click the home panel
-- Click the menu next to the homepage and new windows and choose to show custom URLs and add your Github Pages link
+- Click the menu next to the homepage and new windows and choose to show custom URLs and add your GitHub Pages link
 
 #### As New Tab
 
