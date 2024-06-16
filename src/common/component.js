@@ -25,9 +25,9 @@ class Component extends HTMLElement {
     this.shadow = this.attachShadow({ mode: 'open' });
   }
 
-  style()    { return null; }
+  style() { return null; }
   template() { return null; }
-  imports()  { return []; }
+  imports() { return []; }
 
   /**
    * Reference an external css file
@@ -71,7 +71,7 @@ class Component extends HTMLElement {
    */
   async buildHTML() {
     return await this.loadStyles() +
-          await this.template();
+      await this.template();
   }
 
   /**
