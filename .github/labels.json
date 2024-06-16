@@ -44,7 +44,11 @@
     "description": "Indicates that a maintainer wants help on an issue or pull request",
     "color": "#C5DEF5"
   },
-  { "name": "type: breaking", "description": "Indicates a BREAKING CHANGE", "color": "#B60205" },
+  {
+    "name": "type: breaking",
+    "description": "Indicates a BREAKING CHANGE",
+    "color": "#B60205"
+  },
   {
     "name": "type: bug",
     "description": "Indicates an unexpected problem or unintended behavior",
