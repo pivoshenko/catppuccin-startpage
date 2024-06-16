@@ -4,3 +4,6 @@
 
 # IDE
 .vscode
+
+# OS
+.DS_Store
