@@ -24,8 +24,8 @@ https://github.com/pivoshenko/catppuccin-startpage/assets/40499728/d96c8bd6-168e
 
 ## Overview
 
-Aesthetic and clean startpage in [**Catppuccin Mocha**](https://catppuccin.com/palette) style, hosted on GitHub Pages. This start page is based on the [`dawn`] and [`tartarus-startpage`], which has even more functionality.
-I've tweaked the page's style to match [Catppuccin] palette and my [`dotfiles`].
+Aesthetic and clean startpage in [**Catppuccin Mocha**](https://catppuccin.com/palette) style, hosted on GitHub Pages. This start page is based on the [`dawn`](https://github.com/b-coimbra/dawn) and [`tartarus-startpage`](https://github.com/AllJavi/tartarus-startpage), which has even more functionality.
+I've tweaked the page's style to match [Catppuccin](https://github.com/catppuccin/catppuccin) palette and my [`dotfiles`](https://github.com/pivoshenko/dotfiles).
 
 ### Main principles
 
@@ -37,29 +37,19 @@ I've tweaked the page's style to match [Catppuccin] palette and my [`dotfiles`].
 
 ## Usage
 
-1. Create your own repository for the startpage and clone it
-2. Clone this repository with:
+1. Fork this repository and clone it
 
-```shell
-git clone https://github.com/pivoshenko/catppuccin-startpage.git pivoshenko-catppuccin-startpage
-```
+2. Remove `.github` directory as it contains only PR templates, issue labels etc that are linked to this repository
 
-3. Copy the assets and configs from `pivoshenko-catppuccin-startpage` to your repository:
-
-```shell
-cp pivoshenko-catppuccin-startpage/* <YOUR REPOSITORY>
-```
-
-4. Remove `.github` directory as it contains only PR templates, issue labels etc that are linked to this repository
-5. Update [`userconfig.js`]:
+3. Update [`userconfig.js`](userconfig.js):
    - Set your location for the weather widget
    - Update the number of pages and their banners
    - Update bookmarks and quick links for the one you are using the most :3
 
 > [!TIP]
-> You can find icons for your bookmarks using [`tabler-icons`]
+> You can find icons for your bookmarks using [`tabler-icons`](https://tabler.io/icons)
 >
-> If you want to reduce the loading time of the icons, you could install the icon [font] locally and activate the option `"localIcons": true` in the config to disable the remote styles
+> If you want to reduce the loading time of the icons, you could install the icon [font](src/fonts) locally and activate the option `"localIcons": true` in the config to disable the remote styles
 
 #### As Homepage
 
@@ -71,6 +61,7 @@ cp pivoshenko-catppuccin-startpage/* <YOUR REPOSITORY>
 
 You can use different Add-ons/Extensions for it
 - If you use Firefox: [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/?src=search) and make sure you enable "Force links to open in the top frame (experimental)" in the extension's preferences page
+
 - If you use Chromium (Brave, Chrome): [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia)
 
 
@@ -87,12 +78,3 @@ You can use different Add-ons/Extensions for it
 | cbg-10                                           | cbg-11                                           | cbg-12                                           | cbg-13                                           |
 | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
 | <img src="src/img/banners/cbg-10.gif" width=175> | <img src="src/img/banners/cbg-11.gif" width=175> | <img src="src/img/banners/cbg-12.gif" width=175> | <img src="src/img/banners/cbg-13.gif" width=175> |
-
-
-[`dawn`]: https://github.com/b-coimbra/dawn
-[Catppuccin]: https://github.com/catppuccin/catppuccin
-[`tartarus-startpage`]:https://github.com/AllJavi/tartarus-startpage
-[`dotfiles`]: https://github.com/pivoshenko/dotfiles
-[`userconfig.js`]: userconfig.js
-[`tabler-icons`]: https://tabler.io/icons
-[font]: src/fonts
