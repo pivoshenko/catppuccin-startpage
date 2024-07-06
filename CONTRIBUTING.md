@@ -41,13 +41,20 @@ Explain the problem and make it easy for others to search for and understand:
 
 Provide detailed steps for reproduction of your issue:
 
-- Provide specific examples to demonstrate the steps to reproduce the issue
+- Provide specific examples to demonstrate the steps to reproduce the issue. This could be an example repository, a sequence of steps run in a container
 - Are you unable to reliably reproduce the issue? If so, provide details about how often the problem happens and under which conditions it normally happens
 
 Provide more context by answering these questions:
 
-- Did the problem start happening recently or was this always a problem?
-- Is there anything exotic or unusual about your environment?
+- Did the problem start happening recently (e.g. after updating to a new version of `catppuccin-startpage`) or was this always a problem?
+- If the problem started happening recently, can you reproduce the problem in an older version of `catppuccin-startpage`? What’s the most recent version in which the problem does not happen?
+- Is there anything exotic or unusual about your environment? This could include the use of special container images, newer CPU architectures like Apple Silicon
+
+Include details about your configuration and environment:
+
+- What’s the name and version of the OS you’re using?
+
+To give others the best chance to understand and reproduce your issue, please be sure to put extra effort into your reproduction steps. You can both rule out local configuration issues on your end, and ensure others can cleanly reproduce your issue if attempt all reproductions in a pristine container (or VM), and provide the steps you performed inside that container/VM in your issue report.
 
 ## Suggesting Enhancements
 
@@ -75,8 +82,7 @@ Suggested enhancements concerning `catppuccin-startpage` should be submitted to 
 You should first fork the `catppuccin-startpage` repository and then clone it locally so that you can make pull requests against the project.
 If you are new to `git` and pull request based development, GitHub provides a [guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) you will find helpful.
 
-A great deal of linting tools are run on your code, to try and ensure consistent code style and root out common mistakes.
-The [`pre-commit`](https://pre-commit.com) tool is used to install and run these tools, and requires one-time setup:
+The [`pre-commit`](https://pre-commit.com) tool is used to install and run liniting tools, and requires one-time setup:
 
 ```shell
 pre-commit install
