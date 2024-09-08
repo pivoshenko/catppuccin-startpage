@@ -2,4 +2,4 @@
 
 **Resolves: #issue-number-here**
 
- [ ] Updated **documentation** for changed code
+- [ ] Updated **documentation** for changed code
