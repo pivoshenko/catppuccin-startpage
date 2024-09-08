@@ -25,23 +25,29 @@ Date.prototype.strftime = function (format = "c") {
   };
 
   Number.prototype.ord = function () {
-    return { 1: "st", 2: "nd", 3: "rd" }[(num = this.toString()).length > 1 ? parseInt(num.split("")[1]) : num] || "th";
+    return (
+      {
+        1: "st",
+        2: "nd",
+        3: "rd",
+      }[(num = this.toString()).length > 1 ? parseInt(num.split("")[1]) : num] || "th"
+    );
   };
 
   const month = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-  ],
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ],
     days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
     result = [],
     formats = {

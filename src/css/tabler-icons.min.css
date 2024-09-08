@@ -7,11 +7,6 @@
   font-style: normal;
   font-weight: 400;
   src: url("../fonts/tabler-icons.ttf?v2.33.0") format("truetype");
-  /* src: */
-  /*   url("../fonts/tabler-icons.eot?#iefix-v2.33.0") format("embedded-opentype"), */
-  /*   url("../fonts/tabler-icons.woff2?v2.33.0") format("woff2"), */
-  /*   url("../fonts/tabler-icons.woff?") format("woff"), */
-  /*   url("../fonts/tabler-icons.ttf?v2.33.0") format("truetype"); */
 }
 
 .ti {
@@ -18644,5 +18639,3 @@
 .ti-zzz-off:before {
   content: "\f440";
 }
-
-/*# sourceMappingURL=tabler-icons.min.css.map */
