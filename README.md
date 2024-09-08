@@ -20,7 +20,7 @@
 https://github.com/pivoshenko/catppuccin-startpage/assets/40499728/d96c8bd6-168e-408f-b4f0-0e339569c696
 
 > [!NOTE]
->  A live demo can be found [here](https://pivoshenko.github.io/catppuccin-startpage)
+> A live demo can be found [here](https://pivoshenko.github.io/catppuccin-startpage)
 
 ## Overview
 
@@ -60,10 +60,10 @@ I've tweaked the page's style to match [Catppuccin](https://github.com/catppucci
 #### As New Tab
 
 You can use different Add-ons/Extensions for it
+
 - If you use Firefox: [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/?src=search) and make sure you enable "Force links to open in the top frame (experimental)" in the extension's preferences page
 
 - If you use Chromium (Brave, Chrome): [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia)
-
 
 ### Available banners
 

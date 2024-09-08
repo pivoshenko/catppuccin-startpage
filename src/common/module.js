@@ -5,7 +5,6 @@ const components = {
   "tabs-list": Tabs,
 };
 
-Object.keys(components).forEach(componentName => {
-  if (!CONFIG.disabled.includes(componentName))
-    customElements.define(componentName, components[componentName]);
+Object.keys(components).forEach((componentName) => {
+  if (!CONFIG.disabled.includes(componentName)) customElements.define(componentName, components[componentName]);
 });

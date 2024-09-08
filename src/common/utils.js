@@ -1,7 +1,7 @@
 const { parse, stringify } = JSON;
 
 /**
- * Handler for document.querySelector(All)
+ * Handler for document.querySelector(All).
  * @returns {HTMLElement | Array<HTMLElement>}
  */
 const $ = (e, options) => {
