@@ -22,9 +22,12 @@ https://github.com/pivoshenko/catppuccin-startpage/assets/40499728/d96c8bd6-168e
 > [!NOTE]
 > A live demo can be found [here](https://pivoshenko.github.io/catppuccin-startpage)
 
+> [!CAUTION]
+> Currently, I am doing some refactoring, so README will look way better and closer to the standard Catppuccin project
+
 ## Overview
 
-Aesthetic and clean startpage in [**Catppuccin Mocha**](https://catppuccin.com/palette) style, hosted on GitHub Pages. This start page is based on the [`dawn`](https://github.com/b-coimbra/dawn) and [`tartarus-startpage`](https://github.com/AllJavi/tartarus-startpage), which has even more functionality.
+Aesthetic and clean startpage in [**Catppuccin**](https://catppuccin.com/palette) style, hosted on GitHub Pages. This start page is based on the [`dawn`](https://github.com/b-coimbra/dawn) and [`tartarus-startpage`](https://github.com/AllJavi/tartarus-startpage), which has even more functionality.
 I've tweaked the page's style to match [Catppuccin](https://github.com/catppuccin/catppuccin) palette and my [`dotfiles`](https://github.com/pivoshenko/dotfiles).
 
 ### Main principles
@@ -35,6 +38,13 @@ I've tweaked the page's style to match [Catppuccin](https://github.com/catppucci
 - One style
 - Reduced visual noise
 
+### Supported Palettes
+
+- Latte
+- Frappé
+- Macchiato
+- Mocha
+
 ## Usage
 
 1. Fork this repository and clone it
@@ -42,6 +52,7 @@ I've tweaked the page's style to match [Catppuccin](https://github.com/catppucci
 2. Remove `.github` directory as it contains only PR templates, issue labels etc that are linked to this repository
 
 3. Update [`userconfig.js`](userconfig.js):
+   - Set the desired palette: `latte / frappe / macchiato / mocha`
    - Set your location for the weather widget
    - Update the number of pages and their banners
    - Update bookmarks and quick links for the one you are using the most :3
