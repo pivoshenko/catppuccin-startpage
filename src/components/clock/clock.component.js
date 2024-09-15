@@ -17,12 +17,11 @@ class Clock extends Component {
         .clock-time {
             white-space: nowrap;
             font: 300 9pt 'Roboto', sans-serif;
-            color: #cdd6f4;
+            color: ${CONFIG.palette.text};
             letter-spacing: .5px;
         }
 
         .clock-icon {
-            color: #f38ba8;
             font-size: 10pt;
             margin-right: 10px;
         }
@@ -37,12 +36,11 @@ class Clock extends Component {
   }
 
   setIconColor() {
-    this.refs.icon.style.color = CONFIG.clock.iconColor;
+    this.refs.icon.style.color = CONFIG.palette.maroon;
   }
 
   setTime() {
     const date = new Date();
-
     this.refs.clock = date.strftime(CONFIG.clock.format);
   }
 

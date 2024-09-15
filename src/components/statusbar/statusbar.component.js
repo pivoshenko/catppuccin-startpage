@@ -65,7 +65,7 @@ class Statusbar extends Component {
           width: 35px;
           text-align: center;
           font: 700 13px 'Yu Gothic', serif;
-          color: rgba(205, 214, 244, 0.5);
+          color: ${CONFIG.palette.text};
           padding: 6px 0;
           transition: all .1s;
           cursor: pointer;
@@ -74,7 +74,7 @@ class Statusbar extends Component {
       }
 
       #tabs ul li:not(:last-child):hover {
-          background: #181825;
+          background: ${CONFIG.palette.surface0};
       }
 
       #tabs ul li:last-child {
@@ -87,7 +87,7 @@ class Statusbar extends Component {
       }
 
       #tabs ul li[active]:not(:last-child) {
-          color: #cdd6f4;
+          color: ${CONFIG.palette.text};
           font-size: 13px;
           padding: 6px 0;
       }
@@ -97,20 +97,24 @@ class Statusbar extends Component {
       #tabs ul li[active]:nth-child(4) ~ li:last-child { margin: 0 0 0 105px; }
       #tabs ul li[active]:nth-child(5) ~ li:last-child { margin: 0 0 0 140px; }
 
+      #tabs ul li[active]:nth-child(1) ~ li:last-child {
+          --flavour: ${CONFIG.palette.green};
+      }
+
       #tabs ul li[active]:nth-child(2) ~ li:last-child {
-          --flavour: #fab387;
+          --flavour: ${CONFIG.palette.peach};
       }
 
       #tabs ul li[active]:nth-child(3) ~ li:last-child {
-          --flavour: #f38ba8;
+          --flavour: ${CONFIG.palette.red};
       }
 
       #tabs ul li[active]:nth-child(4) ~ li:last-child {
-          --flavour: #94e2d5;
+          --flavour: ${CONFIG.palette.blue};
       }
 
       #tabs ul li[active]:nth-child(5) ~ li:last-child {
-          --flavour: #f5c2e7;
+          --flavour: ${CONFIG.palette.mauve};
       }
 
       .widgets {
@@ -169,8 +173,8 @@ class Statusbar extends Component {
 
       .fastlink {
           border: 0;
-          background: #181825;
-          color: #a6e3a1;
+          background: ${CONFIG.palette.mantle};
+          color: ${CONFIG.palette.green};
           cursor: pointer;
           border-radius: 5px 15px 15px 5px;
       }

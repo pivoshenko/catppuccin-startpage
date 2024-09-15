@@ -31,11 +31,6 @@
   display: none;
 }
 
-:root {
-  --accent: #a6e3a1;
-  --bg: #181825;
-}
-
 body {
   background-color: var(--bg);
   height: 100vh;
