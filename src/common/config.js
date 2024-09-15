@@ -7,7 +7,6 @@ class Config {
     },
     clock: {
       format: "h:i p",
-      iconColor: "#f38ba8",
     },
     disabled: [],
     openLastVisitedTab: false,
@@ -16,8 +15,9 @@ class Config {
 
   config;
 
-  constructor(config) {
+  constructor(config, palette) {
     this.config = config;
+    this.palette = palette;
     this.storage = new Storage("config");
 
     this.autoConfig();
@@ -92,16 +92,5 @@ class Config {
 
   save() {
     this.storage.save(stringify(this));
-  }
-
-  exportSettings() {
-    const anchor = document.createElement("a");
-    const filename = "dawn.config.json";
-    const mimeType = "data:text/plain;charset=utf-8,";
-
-    anchor.href = mimeType + encodeURIComponent(stringify(this, null, 2));
-    anchor.download = filename;
-
-    anchor.click();
   }
 }
