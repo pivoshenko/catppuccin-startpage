@@ -213,8 +213,8 @@ const default_config = {
           name: "games",
           links: [
             {
-              name: "GG",
-              url: "https://ggapp.io/pivoshenko",
+              name: "IGN",
+              url: "https://www.ign.com/account/playlist/library",
               icon: "device-gamepad",
               icon_color: palette.green,
             },
