@@ -20,9 +20,6 @@
 https://github.com/pivoshenko/catppuccin-startpage/assets/40499728/d96c8bd6-168e-408f-b4f0-0e339569c696
 
 > [!NOTE]
-> A live demo can be found [here](https://pivoshenko.github.io/catppuccin-startpage)
-
-> [!CAUTION]
 > Currently, I am doing some refactoring, so README will look way better and closer to the standard Catppuccin project
 
 ## Overview
