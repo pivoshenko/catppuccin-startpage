@@ -1,3 +1,4 @@
+// latte / frappe / macchiato / mocha
 const palette = macchiato;
 
 const default_config = {
@@ -29,7 +30,7 @@ const default_config = {
             },
             {
               name: "musicForProgramming();",
-              url: "https://musicforprogramming.net/sixty",
+              url: "https://musicforprogramming.net",
               icon: "binary-tree",
               icon_color: palette.peach,
             },
@@ -122,7 +123,7 @@ const default_config = {
             },
             {
               name: "wakatime",
-              url: "https://wakatime.com/dashboard",
+              url: "https://wakatime.com",
               icon: "24-hours",
               icon_color: palette.red,
             },
@@ -133,7 +134,7 @@ const default_config = {
           links: [
             {
               name: "kaggle",
-              url: "https://www.kaggle.com/volodymyrpivoshenko",
+              url: "https://www.kaggle.com",
               icon: "brain",
               icon_color: palette.green,
             },
@@ -144,10 +145,16 @@ const default_config = {
               icon_color: palette.peach,
             },
             {
+              name: "exercism",
+              url: "https://exercism.org",
+              icon: "code-minus",
+              icon_color: palette.red,
+            },
+            {
               name: "stackoverflow",
               url: "https://stackoverflow.com",
               icon: "brand-stackoverflow",
-              icon_color: palette.red,
+              icon_color: palette.blue,
             },
           ],
         },
