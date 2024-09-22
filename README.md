@@ -1,7 +1,7 @@
 <h3 align="center">
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/logos/exports/1544x1544_circle.png" width="100" alt="Logo"/><br/>
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
-  Catppuccin <a href="https://github.com/pivoshenko/catppuccin-startpage">Startpage</a>
+  Catppuccin <a href="https://pivoshenko.github.io/catppuccin-startpage">Startpage</a>
   <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/main/assets/misc/transparent.png" height="30" width="0px"/>
 </h3>
 
@@ -17,17 +17,17 @@
   </a>
 </p>
 
-https://github.com/pivoshenko/catppuccin-startpage/assets/40499728/d96c8bd6-168e-408f-b4f0-0e339569c696
+<p align="center">
+  <img src="assets/preview.png"/>
+</p>
 
-> [!NOTE]
-> Currently, I am doing some refactoring, so README will look way better and closer to the standard Catppuccin project
+## 🪴 Overview
 
-## Overview
+Aesthetic and clean startpage in [**Catppuccin**](https://catppuccin.com/palette) style, hosted on GitHub Pages.
+This startpage is based on the [`dawn`](https://github.com/b-coimbra/dawn), which has even more functionality.
+I've tweaked the page to match my [`dotfiles`](https://github.com/pivoshenko/dotfiles) so check them out as well.
 
-Aesthetic and clean startpage in [**Catppuccin**](https://catppuccin.com/palette) style, hosted on GitHub Pages. This start page is based on the [`dawn`](https://github.com/b-coimbra/dawn) and [`tartarus-startpage`](https://github.com/AllJavi/tartarus-startpage), which has even more functionality.
-I've tweaked the page's style to match [Catppuccin](https://github.com/catppuccin/catppuccin) palette and my [`dotfiles`](https://github.com/pivoshenko/dotfiles).
-
-### Main principles
+### 🧠 Main principles
 
 - Minimalism in everything
 - Consistency
@@ -35,19 +35,17 @@ I've tweaked the page's style to match [Catppuccin](https://github.com/catppucci
 - One style
 - Reduced visual noise
 
-### Supported Palettes
+### 🎨 Supported Palettes
 
 - Latte
 - Frappé
 - Macchiato
 - Mocha
 
-## Usage
+## 🪵 Usage
 
 1. Fork this repository and clone it
-
-2. Remove `.github` directory as it contains only PR templates, issue labels etc that are linked to this repository
-
+2. Optionally remove the `.github` directory as it contains only PR templates, issue labels, etc that are linked to this repository
 3. Update [`userconfig.js`](userconfig.js):
    - Set the desired palette: `latte / frappe / macchiato / mocha`
    - Set your location for the weather widget
@@ -67,13 +65,12 @@ I've tweaked the page's style to match [Catppuccin](https://github.com/catppucci
 
 #### As New Tab
 
-You can use different Add-ons/Extensions for it
+You can use different add-ons/extensions for it
 
 - If you use Firefox: [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/?src=search) and make sure you enable "Force links to open in the top frame (experimental)" in the extension's preferences page
+- If you use Chromium (Brave / Chrome): [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia)
 
-- If you use Chromium (Brave, Chrome): [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia)
-
-### Available banners
+### 🖼️ Available banners
 
 | cbg-2                                           | cbg-3                                           | cbg-4                                           | cbg-5                                           |
 | ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
