@@ -107,7 +107,7 @@ const default_config = {
       background_url: "src/img/banners/cbg-8.gif",
       categories: [
         {
-          name: "resources",
+          name: "development",
           links: [
             {
               name: "github",
@@ -159,7 +159,7 @@ const default_config = {
           ],
         },
         {
-          name: "blogs",
+          name: "resources",
           links: [
             {
               name: "dou",
@@ -194,7 +194,7 @@ const default_config = {
       background_url: "src/img/banners/cbg-10.gif",
       categories: [
         {
-          name: "social medias",
+          name: "social media",
           links: [
             {
               name: "telegram",
@@ -217,7 +217,7 @@ const default_config = {
           ],
         },
         {
-          name: "games",
+          name: "gaming",
           links: [
             {
               name: "IGN",
