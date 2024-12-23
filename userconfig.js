@@ -28,6 +28,12 @@ const default_config = {
               icon: "droplet-bolt",
               icon_color: palette.green,
             },
+            {
+              name: "musicForProgramming();",
+              url: "https://musicforprogramming.net",
+              icon: "binary-tree",
+              icon_color: palette.peach,
+            },
           ],
         },
         {
@@ -116,9 +122,9 @@ const default_config = {
               icon_color: palette.peach,
             },
             {
-              name: "musicForProgramming();",
-              url: "https://musicforprogramming.net",
-              icon: "binary-tree",
+              name: "stackoverflow",
+              url: "https://stackoverflow.com",
+              icon: "brand-stackoverflow",
               icon_color: palette.red,
             },
           ],
@@ -143,12 +149,6 @@ const default_config = {
               url: "https://exercism.org",
               icon: "code-minus",
               icon_color: palette.red,
-            },
-            {
-              name: "stackoverflow",
-              url: "https://stackoverflow.com",
-              icon: "brand-stackoverflow",
-              icon_color: palette.blue,
             },
           ],
         },
