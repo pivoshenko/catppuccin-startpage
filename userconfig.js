@@ -150,6 +150,12 @@ const default_config = {
               icon: "code-minus",
               icon_color: palette.red,
             },
+            {
+              name: "aoc",
+              url: "https://adventofcode.com",
+              icon: "brand-linktree",
+              icon_color: palette.blue,
+            },
           ],
         },
         {
