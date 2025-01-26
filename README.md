@@ -67,19 +67,23 @@ I've tweaked the page to match my [`dotfiles`](https://github.com/pivoshenko/dot
 
 You can use different add-ons/extensions for it
 
-- If you use Firefox: [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/?src=search) and make sure you enable "Force links to open in the top frame (experimental)" in the extension's preferences page
-- If you use Chromium (Brave / Chrome): [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia)
+- If you use Firefox-based browsers: [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/?src=search) and make sure you enable "Force links to open in the top frame (experimental)" in the extension's preferences page
+- If you use Chromium-based browsers (Brave / Chrome): [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia)
 
 ### 🖼️ Available banners
 
-| cbg-2                                           | cbg-3                                           | cbg-4                                           | cbg-5                                           |
-| ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
-| <img src="src/img/banners/cbg-2.gif" width=175> | <img src="src/img/banners/cbg-3.gif" width=175> | <img src="src/img/banners/cbg-4.gif" width=175> | <img src="src/img/banners/cbg-5.gif" width=175> |
-
-| cbg-6                                           | cbg-7                                           | cbg-8                                           | cbg-9                                           |
-| ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- | ----------------------------------------------- |
-| <img src="src/img/banners/cbg-6.gif" width=175> | <img src="src/img/banners/cbg-7.gif" width=175> | <img src="src/img/banners/cbg-8.gif" width=175> | <img src="src/img/banners/cbg-9.gif" width=175> |
-
-| cbg-10                                           | cbg-11                                           | cbg-12                                           | cbg-13                                           |
+| cbg-01                                           | cbg-02                                           | cbg-03                                           | cbg-04                                           |
 | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
-| <img src="src/img/banners/cbg-10.gif" width=175> | <img src="src/img/banners/cbg-11.gif" width=175> | <img src="src/img/banners/cbg-12.gif" width=175> | <img src="src/img/banners/cbg-13.gif" width=175> |
+| <img src="src/img/banners/cbg-01.gif" width=175> | <img src="src/img/banners/cbg-02.gif" width=175> | <img src="src/img/banners/cbg-03.gif" width=175> | <img src="src/img/banners/cbg-04.gif" width=175> |
+
+| cbg-05                                           | cbg-06                                           | cbg-07                                           | cbg-08                                           |
+| ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
+| <img src="src/img/banners/cbg-05.gif" width=175> | <img src="src/img/banners/cbg-06.gif" width=175> | <img src="src/img/banners/cbg-07.gif" width=175> | <img src="src/img/banners/cbg-08.gif" width=175> |
+
+| cbg-09                                           | cbg-10                                           | cbg-11                                           | cbg-12                                           |
+| ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
+| <img src="src/img/banners/cbg-09.gif" width=175> | <img src="src/img/banners/cbg-10.gif" width=175> | <img src="src/img/banners/cbg-11.gif" width=175> | <img src="src/img/banners/cbg-12.gif" width=175> |
+
+| cbg-13                                           | cbg-14                                           | cbg-15                                           |
+| ------------------------------------------------ | ------------------------------------------------ | ------------------------------------------------ |
+| <img src="src/img/banners/cbg-13.gif" width=175> | <img src="src/img/banners/cbg-14.gif" width=175> | <img src="src/img/banners/cbg-15.gif" width=175> |
