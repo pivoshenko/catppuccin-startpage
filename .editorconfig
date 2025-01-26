@@ -9,12 +9,3 @@ insert_final_newline = true
 max_line_length = 120
 tab_width = 4
 trim_trailing_whitespace = true
-
-[{*.har,*.jsb2,*.jsb3,*.json,.babelrc,.eslintrc,.stylelintrc,bowerrc,jest.config}]
-indent_size = 2
-
-[{*.js,*.jsx,*.ts,*.tsx}]
-indent_size = 2
-
-[{*.yaml,*.yml}]
-indent_size = 2
