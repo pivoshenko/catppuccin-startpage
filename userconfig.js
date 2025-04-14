@@ -11,8 +11,18 @@ const default_config = {
     format: "h:i p",
     iconColor: palette.maroon,
   },
+  search: {
+    engines: {
+      g: ["https://google.com/search?q=", "Google"],
+      d: ["https://duckduckgo.com/html?q=", "DuckDuckGo"],
+    },
+  },
+  keybindings: {
+    "s": "search-bar",
+  },
   disabled: [],
-  fastlink: "https://app.raindrop.io",
+  localIcons: false,
+  fastlink: "https://chat.openai.com",
   openLastVisitedTab: true,
   tabs: [
     {
