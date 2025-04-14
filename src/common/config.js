@@ -8,9 +8,18 @@ class Config {
     clock: {
       format: "h:i p",
     },
+    search: {
+      engines: {
+        g: ["https://google.com/search?q=", "Google"],
+        d: ["https://duckduckgo.com/html?q=", "DuckDuckGo"],
+      }
+    },
     disabled: [],
     openLastVisitedTab: false,
     tabs: [],
+    keybindings: {
+      "s": "search-bar",
+    }
   };
 
   config;
@@ -92,5 +101,16 @@ class Config {
 
   save() {
     this.storage.save(stringify(this));
+  }
+
+  exportSettings() {
+    const anchor = document.createElement('a');
+    const filename = 'dawn.config.json';
+    const mimeType = 'data:text/plain;charset=utf-8,';
+
+    anchor.href = mimeType + encodeURIComponent(stringify(this, null, 2));
+    anchor.download = filename;
+
+    anchor.click();
   }
 }
