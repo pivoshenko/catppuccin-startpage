@@ -82,19 +82,6 @@ Suggested enhancements concerning `catppuccin-startpage` should be submitted to 
 You should first fork the `catppuccin-startpage` repository and then clone it locally so that you can make pull requests against the project.
 If you are new to `git` and pull request based development, GitHub provides a [guide](https://docs.github.com/en/get-started/quickstart/contributing-to-projects) you will find helpful.
 
-The [`pre-commit`](https://pre-commit.com) tool is used to install and run liniting tools, and requires one-time setup:
-
-```shell
-pre-commit install
-```
-
-`pre-commit` will now run and check your code every time you make a commit.
-By default, it will only run on changed files, but you can run it on all files manually (this may be useful if you altered the `pre-commit` config):
-
-```shell
-pre-commit run --all-files
-```
-
 ### Commits
 
 We follow the [conventional commit message syntax](https://www.conventionalcommits.org/en/v1.0.0) for our commits. For instance:
