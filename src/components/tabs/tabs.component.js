@@ -23,16 +23,16 @@ class Links extends Component {
             <h1>${name}</h1>
               <div class="links-wrapper">
               ${links
-                .map(
-                  (link) => `
+              .map(
+                (link) => `
                   <div class="link-info">
                     <a href="${link.url}" target="_blank">
                       ${Links.getIcon(link)}
                       ${link.name ? `<p class="link-name">${link.name}</p>` : ""}
                     </a>
                 </div>`,
-                )
-                .join("")}
+              )
+              .join("")}
             </div>
           </li>`;
         })
@@ -290,6 +290,7 @@ class Tabs extends Component {
         <div id="panels">
           <div class="categories">
             ${Category.getAll(this.tabs)}
+            <search-bar></search-bar>
           </div>
           <status-bar class="!-"></status-bar>
         </div>
