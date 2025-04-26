@@ -4,6 +4,7 @@
 
 # IDE
 .vscode
+.zed
 
 # OS
 .DS_Store
