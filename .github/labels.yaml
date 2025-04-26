@@ -43,13 +43,13 @@
   color: D93F0B
 
 - name: "type: documentation"
-  description: Indicates a need for improvements or additions to documentation
+  description: Indicates a need for improvement or addition to documentation
   color: 006B75
 
 - name: "type: enhancement"
-  description: Indicates new feature requests
+  description: Indicates a new feature request
   color: 0E8A16
 
 - name: "type: maintenance"
-  description: Indicates changes to the CI, build system or external dependencies, a code change that neither fix
+  description: Indicates changes to the CI, or external dependencies; a code change that does not fix a bug or add a feature
   color: FBCA04
