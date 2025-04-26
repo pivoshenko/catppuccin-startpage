@@ -1,3 +1,5 @@
+// Catppuccin palette definitions for startpage theming.
+// Each palette provides a set of named color values for consistent customisation.
 const latte = {
   rosewater: "#dc8a78",
   flamingo: "#dd7878",
