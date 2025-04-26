@@ -22,7 +22,7 @@ helps maintainers and the community understand your report, reproduce the behavi
 
 Before creating bug reports, please check that your issue does not already exist in the issue tracker.
 When you are creating a bug report, please include as many details as possible. Fill out the required
-template the information it asks helps the maintainers resolve the issue faster.
+template; the information it asks for helps the maintainers resolve the issue faster.
 
 > [!NOTE]
 > If you find a **Closed** issue that seems like it is the same thing that you're experiencing,
@@ -41,18 +41,18 @@ Explain the problem and make it easy for others to search for and understand:
 
 Provide detailed steps for reproduction of your issue:
 
-- Provide specific examples to demonstrate the steps to reproduce the issue. This could be an example repository, a sequence of steps run in a container
-- Are you unable to reliably reproduce the issue? If so, provide details about how often the problem happens and under which conditions it normally happens
+- Provide specific examples to demonstrate the steps to reproduce the issue. This could be an example repository or a sequence of steps run in a container.
+- Are you unable to reliably reproduce the issue? If so, provide details about how often the problem occurs and under which conditions.
 
 Provide more context by answering these questions:
 
 - Did the problem start happening recently (e.g. after updating to a new version of `catppuccin-startpage`) or was this always a problem?
 - If the problem started happening recently, can you reproduce the problem in an older version of `catppuccin-startpage`? What’s the most recent version in which the problem does not happen?
-- Is there anything exotic or unusual about your environment? This could include the use of special container images, newer CPU architectures like Apple Silicon
+- Is there anything exotic or unusual about your environment? This could include the use of special container images or newer CPU architectures, such as Apple Silicon.
 
 Include details about your configuration and environment:
 
-- What’s the name and version of the OS you’re using?
+- What’s the name and version of the Browser you’re using?
 
 To give others the best chance to understand and reproduce your issue, please be sure to put extra effort into your reproduction steps. You can both rule out local configuration issues on your end, and ensure others can cleanly reproduce your issue if attempt all reproductions in a pristine container (or VM), and provide the steps you performed inside that container/VM in your issue report.
 
