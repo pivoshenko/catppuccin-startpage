@@ -1,7 +1,7 @@
-// latte / frappe / macchiato / mocha
+// User configuration for the startpage. Update the palette, location, and your preferred tabs, categories, and links.
 const palette = macchiato;
 
-const default_config = {
+const default_configuration = {
   overrideStorage: true,
   temperature: {
     location: "London",
@@ -9,7 +9,7 @@ const default_config = {
   },
   clock: {
     format: "h:i p",
-    iconColor: palette.maroon,
+    icon_color: palette.maroon,
   },
   search: {
     engines: {
@@ -27,7 +27,7 @@ const default_config = {
   tabs: [
     {
       name: "myself",
-      background_url: "src/img/banners/cbg-09.gif",
+      background_url: "src/img/banners/banner_09.gif",
       categories: [
         {
           name: "bookmarks",
@@ -114,7 +114,7 @@ const default_config = {
     },
     {
       name: "dev",
-      background_url: "src/img/banners/cbg-07.gif",
+      background_url: "src/img/banners/banner_07.gif",
       categories: [
         {
           name: "development",
@@ -201,7 +201,7 @@ const default_config = {
     },
     {
       name: "chi ll",
-      background_url: "src/img/banners/cbg-08.gif",
+      background_url: "src/img/banners/banner_08.gif",
       categories: [
         {
           name: "social media",
@@ -289,7 +289,7 @@ const default_config = {
   ],
 };
 
-const CONFIG = new Config(default_config, palette);
+const CONFIG = new Config(default_configuration, palette);
 
 const root = document.querySelector(":root");
 root.style.setProperty("--bg", palette.mantle);
