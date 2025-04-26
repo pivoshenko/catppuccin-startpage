@@ -1,4 +1,5 @@
 class Config {
+  // Default configuration values for the startpage. These can be overridden by user configuration or local storage.
   defaults = {
     overrideStorage: false,
     temperature: {
@@ -24,15 +25,17 @@ class Config {
 
   config;
 
-  constructor(config, palette) {
-    this.config = config;
+  constructor(configuration, palette) {
+    // Store the user configuration and palette for the startpage.
+    this.config = configuration;
     this.palette = palette;
-    this.storage = new Storage("config");
+    this.storage = new Storage("configuration");
 
     this.autoConfig();
     this.setKeybindings();
     this.save();
 
+    // Use a Proxy to automatically persist configuration changes.
     return new Proxy(this, {
       ...this,
       __proto__: this.__proto__,
@@ -41,7 +44,7 @@ class Config {
   }
 
   /**
-   * Automatically save whenever a config property is updated.
+   * Automatically save whenever a configuration property is updated.
    * @returns {void}
    */
   settingUpdatedCallback(target, prop, val) {
@@ -56,7 +59,7 @@ class Config {
   }
 
   /**
-   * Set default config values or load them from the local storage.
+   * Set default configuration values or load them from local storage.
    * @returns {void}
    */
   autoConfig() {
@@ -68,16 +71,16 @@ class Config {
   }
 
   /**
-   * Determines whether the localStorage can be overridden.
+   * Determines whether localStorage can be overridden for a given setting.
    * If the setting is for the tabs section, always override.
-   * @returns {bool}
+   * @returns {boolean}
    */
   canOverrideStorage(setting) {
     return setting in this.config && (this.config.overrideStorage || setting === "tabs");
   }
 
   /**
-   * Deserialize the configuration object.
+   * Serialise the configuration object for export or storage.
    * @returns {Object}
    */
   toJSON() {
@@ -88,7 +91,7 @@ class Config {
   }
 
   /**
-   * Trigger keybinding actions.
+   * Set up keybinding actions for the startpage.
    * @returns {void}
    */
   setKeybindings() {
@@ -99,13 +102,19 @@ class Config {
     };
   }
 
+  /**
+   * Persist the current configuration to local storage.
+   */
   save() {
     this.storage.save(stringify(this));
   }
 
+  /**
+   * Export the current configuration as a downloadable file.
+   */
   exportSettings() {
     const anchor = document.createElement('a');
-    const filename = 'dawn.config.json';
+    const filename = 'dawn.configuration.json';
     const mimeType = 'data:text/plain;charset=utf-8,';
 
     anchor.href = mimeType + encodeURIComponent(stringify(this, null, 2));

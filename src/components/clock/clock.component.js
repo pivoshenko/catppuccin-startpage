@@ -1,3 +1,4 @@
+// References to DOM elements for the clock component.
 class Clock extends Component {
   refs = {
     clock: ".clock-time",
@@ -8,10 +9,12 @@ class Clock extends Component {
     super();
   }
 
+  // Import required fonts and icons for the clock display.
   imports() {
     return [this.resources.icons.material, this.resources.fonts.roboto];
   }
 
+  // Define the style for the clock component using the current palette.
   style() {
     return `
         .clock-time {
@@ -28,6 +31,7 @@ class Clock extends Component {
     `;
   }
 
+  // Render the clock icon and time.
   template() {
     return `
         <span class="material-icons clock-icon">schedule</span>
@@ -35,20 +39,22 @@ class Clock extends Component {
     `;
   }
 
+  // Set the icon color based on the configuration.
   setIconColor() {
-    this.refs.icon.style.color = CONFIG.clock.iconColor;
+    this.refs.icon.style.color = CONFIG.clock.icon_color;
   }
 
+  // Update the displayed time using the configured format.
   setTime() {
     const date = new Date();
     this.refs.clock = date.strftime(CONFIG.clock.format);
   }
 
+  // Initialise the clock and update every second.
   connectedCallback() {
     this.render().then(() => {
       this.setTime();
       this.setIconColor();
-
       setInterval(() => this.setTime(), 1000);
     });
   }
