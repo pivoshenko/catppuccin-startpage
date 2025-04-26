@@ -21,15 +21,6 @@
   <img src="assets/preview.png"/>
 </p>
 
-- [🪴 Overview](#-overview)
-  - [🧠 Main Principles](#-main-principles)
-  - [🎨 Supported Palettes](#-supported-palettes)
-- [🪵 Usage](#-usage)
-    - [As Homepage](#as-homepage)
-    - [As New Tab](#as-new-tab)
-  - [🔎 Search](#-search)
-  - [🖼️ Available Banners](#️-available-banners)
-
 # 🪴 Overview
 
 A minimalistic and customizable startpage featuring the [**Catppuccin palettes**](https://catppuccin.com/palette).
