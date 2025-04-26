@@ -43,7 +43,7 @@ body:
     attributes:
       label: Impact
       description: |
-        Please describe the motivation for this feature. Describe, as best you can, how this improves or impacts the users and why this is important.
+        Please describe the motivation for this feature. Explain, as best you can, how this would improve or impact users, and why it is important.
     validations:
       required: true
 
@@ -51,6 +51,6 @@ body:
     attributes:
       label: Workarounds
       description: |
-        Is there a mitigation, workaround, or addon that allows users to achieve the same functionality today?
+        Is there a mitigation, workaround, or add-on that allows users to achieve the same functionality today?
     validations:
       required: false

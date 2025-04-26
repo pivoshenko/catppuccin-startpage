@@ -30,15 +30,15 @@ body:
     attributes:
       label: Workarounds
       description: |
-        Is there a mitigation or workaround that allows users to avoid the issue today?
+        Is there a mitigation or workaround that allows users to avoid this issue at present?
     validations:
       required: false
 
   - type: input
     attributes:
-      label: Operating System
+      label: Browser
       description: |
-        What Operating System are you using?
-      placeholder: "Fedora 39"
+        Which browser are you using?
+      placeholder: "Zen"
     validations:
       required: true
