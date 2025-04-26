@@ -13,8 +13,8 @@ const default_config = {
   },
   search: {
     engines: {
+      d: ["https://duckduckgo.com/?q=", "DuckDuckGo"],
       g: ["https://google.com/search?q=", "Google"],
-      d: ["https://duckduckgo.com/html?q=", "DuckDuckGo"],
     },
   },
   keybindings: {
