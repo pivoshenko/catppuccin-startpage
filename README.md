@@ -39,6 +39,13 @@ A minimalistic and customisable startpage featuring the [**Catppuccin palettes**
 - Macchiato
 - Mocha
 
+## ⭐ Features
+
+- Automatic theme switching based on system settings (light/dark mode)
+- Customisable startpage / bookmarks manager
+- Search bar with multiple engines
+- Weather widget
+
 # 🪵 Usage
 
 1. Fork this repository and clone it
@@ -67,13 +74,11 @@ You can use different add-ons or extensions for this.
 - If you use Firefox-based browsers: [Custom New Tab Page](https://addons.mozilla.org/en-US/firefox/addon/custom-new-tab-page/?src=search) and make sure to enable "Force links to open in the top frame (experimental)" in the extension's preferences page
 - If you use Chromium-based browsers (Brave / Chrome): [Custom New Tab URL](https://chrome.google.com/webstore/detail/custom-new-tab-url/mmjbdbjnoablegbkcklggeknkfcjkjia)
 
-## 🔎 Search
+### 🔎 Search
 
-<p align="center">
-  <img src="assets/preview_search.png"/>
-</p>
+The search dialogue allows you to display a search bar with various search engines defined in the configuration. To run search dialogue, simply press `s` and type your query.
 
-The search dialogue allows you to display a search bar with various search engines defined in the configuration. To select each one, simply prefix the query with the corresponding `!<id>`. By default, the defined search engines are:
+To select search engine, simply prefix the query with the corresponding `!<id>`. By default, the defined search engines are:
 
 - `!g`: Google
 - `!d`: DuckDuckGo (default)
