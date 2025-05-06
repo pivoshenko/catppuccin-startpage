@@ -76,6 +76,11 @@ You can use different add-ons or extensions for this.
 
 ### 🔎 Search
 
+<p align="center">
+  <img src="assets/preview._searchbar.png"/>
+</p>
+
+
 The search dialogue allows you to display a search bar with various search engines defined in the configuration. To run search dialogue, simply press `s` and type your query.
 
 To select search engine, simply prefix the query with the corresponding `!<id>`. By default, the defined search engines are:
