@@ -21,7 +21,7 @@ class Search extends Component {
           justify-content: center;
           width: calc(100% - 2px);
           height: 100%;
-          background: rgb(24 24 29 / 80%);
+          background: ${CONFIG.palette.mantle}cc;
           z-index: 99;
           visibility: hidden;
           top: -100%;
@@ -77,7 +77,7 @@ class Search extends Component {
 
       .search-engines {
           list-style: none;
-          color: rgb(91, 96, 120);
+          color: ${CONFIG.palette.overlay1};
           display: flex;
           padding: 0;
           top: 50px;
