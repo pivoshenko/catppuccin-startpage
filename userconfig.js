@@ -1,5 +1,11 @@
 // User configuration for the startpage. Update the palette, location, and your preferred tabs, categories, and links.
-const palette = mocha;
+
+// Define preferred palette for light and dark mode
+// Available themes: latte, frappe, mocha, macchiato
+const preferredLightTheme = latte;
+const preferredDarkTheme = mocha;
+
+let palette = initThemeSystem(preferredLightTheme, preferredDarkTheme);
 
 const default_configuration = {
   overrideStorage: true,
