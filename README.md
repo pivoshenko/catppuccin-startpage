@@ -102,10 +102,10 @@ To select search engine, simply prefix the query with the corresponding `!<id>`.
 | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
 | <img src="src/img/banners/banner_09.gif" width=175> | <img src="src/img/banners/banner_10.gif" width=175> | <img src="src/img/banners/banner_11.gif" width=175> | <img src="src/img/banners/banner_12.gif" width=175> |
 
-| banner_13                                           | banner_14                                           | banner_15                                           |
-| --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
-| <img src="src/img/banners/banner_13.gif" width=175> | <img src="src/img/banners/banner_14.gif" width=175> | <img src="src/img/banners/banner_15.gif" width=175> |
+| banner_13                                           | banner_14                                           | banner_15                                           | banner_16                                           |
+| --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
+| <img src="src/img/banners/banner_13.gif" width=175> | <img src="src/img/banners/banner_14.gif" width=175> | <img src="src/img/banners/banner_15.gif" width=175> | <img src="src/img/banners/banner_16.gif" width=175> |
 
-| banner_16                                           | banner_17                                           | banner_18                                           |
-| --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
-| <img src="src/img/banners/banner_16.gif" width=175> | <img src="src/img/banners/banner_17.gif" width=175> | <img src="src/img/banners/banner_18.gif" width=175> |
+| banner_17                                           | banner_18                                           |
+| --------------------------------------------------- | --------------------------------------------------- |
+| <img src="src/img/banners/banner_17.gif" width=175> | <img src="src/img/banners/banner_18.gif" width=175> |
