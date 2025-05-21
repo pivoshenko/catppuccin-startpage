@@ -19,6 +19,7 @@ const default_configuration = {
   },
   search: {
     engines: {
+      p: ["https://www.perplexity.ai/search/?q=", "PerplexityAI"],
       d: ["https://duckduckgo.com/?q=", "DuckDuckGo"],
       g: ["https://google.com/search?q=", "Google"],
     },
@@ -28,7 +29,7 @@ const default_configuration = {
   },
   disabled: [],
   localIcons: false,
-  fastlink: "https://chat.openai.com",
+  fastlink: "https://www.perplexity.ai",
   openLastVisitedTab: true,
   tabs: [
     {
