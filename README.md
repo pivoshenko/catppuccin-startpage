@@ -85,6 +85,7 @@ The search dialogue allows you to display a search bar with various search engin
 
 To select search engine, simply prefix the query with the corresponding `!<id>`. By default, the defined search engines are:
 
+- `!p`: PerplexityAI
 - `!g`: Google
 - `!d`: DuckDuckGo (default)
 
