@@ -39,7 +39,7 @@
   color: B60205
 
 - name: "type: bug"
-  description: Indicates an unexpected problem or unintended behavior
+  description: Indicates an unexpected problem or unintended behaviour
   color: D93F0B
 
 - name: "type: documentation"
