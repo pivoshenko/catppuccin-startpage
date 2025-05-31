@@ -1,4 +1,6 @@
+// Search component for handling search functionality with multiple engines
 class Search extends Component {
+  // References to DOM elements for the search component
   refs = {
     search: '#search',
     input: '#search input[type="text"]',
@@ -6,12 +8,19 @@ class Search extends Component {
     close: '.close'
   };
 
+  /**
+   * Initialise the search component with configured engines
+   */
   constructor() {
     super();
 
     this.engines = CONFIG.search.engines;
   }
 
+  /**
+   * Define the style for the search component using the current palette
+   * @returns {string} CSS styles for the search component
+   */
   style() {
     return `
       #search {
@@ -103,6 +112,10 @@ class Search extends Component {
     `;
   }
 
+  /**
+   * Import required fonts and icons for the search display
+   * @returns {Array<string>} Array of resource imports
+   */
   imports() {
     return [
       this.resources.fonts.roboto,
@@ -110,6 +123,10 @@ class Search extends Component {
     ];
   }
 
+  /**
+   * Render the search overlay template
+   * @returns {string} HTML template for the search component
+   */
   template() {
     return `
         <div id="search">
@@ -122,21 +139,38 @@ class Search extends Component {
     `;
   }
 
+  /**
+   * Load available search engines into the interface
+   * @returns {void}
+   */
   loadEngines() {
     for (var key in this.engines)
       this.refs.engines.innerHTML += `<li><p title="${this.engines[key][1]}">!${key}</p></li>`;
   }
 
+  /**
+   * Activate the search overlay
+   * @returns {void}
+   */
   activate() {
     this.refs.search.classList.add('active');
     this.refs.input.scrollIntoView();
     setTimeout(() => this.refs.input.focus(), 100);
   }
 
+  /**
+   * Deactivate the search overlay
+   * @returns {void}
+   */
   deactivate() {
     this.refs.search.classList.remove('active');
   }
 
+  /**
+   * Handle search input and engine selection
+   * @param {KeyboardEvent} event - The keyboard event from user input
+   * @returns {void}
+   */
   handleSearch(event) {
     const { target, key } = event;
 
@@ -145,6 +179,7 @@ class Search extends Component {
     let defaultEngine = this.engines['d'][0];
     let engine = defaultEngine;
 
+    // Highlight active engine based on prefix
     this.refs.engines.childNodes.forEach(engine => {
       if (prefix === engine.firstChild.innerHTML)
         engine.classList.add('active');
@@ -152,24 +187,36 @@ class Search extends Component {
         engine.classList.remove('active');
     });
 
+    // Handle Enter key for search execution
     if (key === 'Enter') {
+      // Check for engine prefix (e.g., !g for Google)
       if (prefix.indexOf('!') === 0) {
         engine = this.engines[prefix.substr(1)][0];
         args = args.slice(1);
       }
 
+      // Navigate to search results
       window.location = engine + encodeURI(args.join(' '));
     }
 
+    // Handle Escape key to close search
     if (key === 'Escape')
       this.deactivate();
   }
 
+  /**
+   * Set up event listeners for search interactions
+   * @returns {void}
+   */
   setEvents() {
     this.refs.search.onkeyup = (e) => this.handleSearch(e);
     this.refs.close.onclick = () => this.deactivate();
   }
 
+  /**
+   * Initialise the search component when connected to DOM
+   * @returns {void}
+   */
   connectedCallback() {
     this.render().then(() => {
       this.loadEngines();

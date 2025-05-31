@@ -1,8 +1,18 @@
+
+// Component for rendering navigation links within tabs
 class Links extends Component {
+  /**
+   * Initialise the Links component
+   */
   constructor() {
     super();
   }
 
+  /**
+   * Generates icon HTML for a link
+   * @param {Object} link - Link object containing icon properties
+   * @returns {string} HTML string for the icon or empty string
+   */
   static getIcon(link) {
     const defaultColor = CONFIG.palette.base;
 
@@ -12,6 +22,12 @@ class Links extends Component {
       : "";
   }
 
+  /**
+   * Generates HTML for all links in a specific tab
+   * @param {string} tabName - Name of the tab to render links for
+   * @param {Array} tabs - Array of tab objects
+   * @returns {string} HTML string containing all links
+   */
   static getAll(tabName, tabs) {
     const { categories } = tabs.find((f) => f.name === tabName);
 
@@ -41,15 +57,31 @@ class Links extends Component {
   }
 }
 
+/**
+ * Component for rendering tab categories with background styling
+ */
 class Category extends Component {
+  /**
+   * Initialise the Category component
+   */
   constructor() {
     super();
   }
 
+  /**
+   * Generates background style attribute for category
+   * @param {string} url - Background image URL
+   * @returns {string} CSS style attribute string
+   */
   static getBackgroundStyle(url) {
     return `style="background-image: url(${url}); background-repeat: no-repeat;background-size: contain;"`;
   }
 
+  /**
+   * Generates HTML for all tab categories
+   * @param {Array} tabs - Array of tab objects
+   * @returns {string} HTML string containing all categories
+   */
   static getAll(tabs) {
     return `
       ${tabs
@@ -64,14 +96,25 @@ class Category extends Component {
   }
 }
 
+/**
+ * Main tabs component for displaying categorised links and navigation
+ */
 class Tabs extends Component {
+  // CSS selector references for DOM elements
   refs = {};
 
+  /**
+   * Initialise the tabs component with configuration
+   */
   constructor() {
     super();
     this.tabs = CONFIG.tabs;
   }
 
+  /**
+   * Returns CSS import dependencies for this component
+   * @returns {string[]} Array of CSS file paths
+   */
   imports() {
     return [
       this.resources.icons.material,
@@ -82,6 +125,10 @@ class Tabs extends Component {
     ];
   }
 
+  /**
+   * Generates component CSS styles
+   * @returns {string} CSS styles for the tabs component
+   */
   style() {
     return `
       status-bar {
@@ -283,6 +330,10 @@ class Tabs extends Component {
     `;
   }
 
+  /**
+   * Generates HTML template for the tabs component
+   * @returns {string} HTML template with panels and categories
+   */
   template() {
     return `
       <div id="links" class="-">
@@ -298,6 +349,9 @@ class Tabs extends Component {
     `;
   }
 
+  /**
+   * Component lifecycle callback when element is connected to DOM
+   */
   connectedCallback() {
     this.render();
   }
