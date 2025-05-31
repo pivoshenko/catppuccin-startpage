@@ -45,6 +45,7 @@ A minimalistic and customisable startpage featuring the [**Catppuccin palettes**
 - Customisable startpage / bookmarks manager
 - Search bar with multiple engines
 - Weather widget
+- Clock widget with 12/24-hour format and multiple time zones support
 
 # 🪵 Usage
 
@@ -88,6 +89,36 @@ To select search engine, simply prefix the query with the corresponding `!<id>`.
 - `!p`: PerplexityAI
 - `!g`: Google
 - `!d`: DuckDuckGo (default)
+
+### ⏰ Clock
+
+The startpage now features an enhanced clock component with:
+
+- Support for 12-hour and 24-hour time formats
+- Multiple clocks for different time zones
+- Customisable formatting options
+- Locale support for regional time display
+
+You can configure the clock format and add additional time zones in your `userconfig.js`:
+
+```javascript
+clock: {
+  format: "h:i", // 24-hour format
+  icon_color: palette.maroon,
+},
+// Optional: Add multiple clocks for different time zones
+additionalClocks: [
+  {
+    label: "NYC", // Label for the clock
+    timezone: "America/New_York", // IANA timezone name (handles DST automatically)
+    format: "k:i p", // 12-hour format with leading zero (09:30 PM)
+    locale: "en-US", // Locale for date/time formatting
+    icon_color: palette.blue // Optional different icon color
+  }
+],
+```
+
+For full documentation of clock format options, [see](docs/CLOCK.md).
 
 ## 🖼️ Available Banners
 

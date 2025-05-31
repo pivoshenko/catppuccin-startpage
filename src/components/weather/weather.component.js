@@ -1,10 +1,14 @@
+
+// Weather component displays current weather information with temperature and condition icons
 class Weather extends Component {
+  // DOM element selectors for weather display elements
   refs = {
     temperature: ".weather-temperature-value",
     condition: ".weather-condition-icon",
     scale: ".weather-temperature-scale",
   };
 
+  // Weather condition mappings to Material Design icons and colours
   forecasts = [
     {
       conditions: ["clouds", "mist", "haze", "smoke"],
@@ -30,6 +34,9 @@ class Weather extends Component {
 
   location;
 
+  /**
+   * Initialise the weather component
+   */
   constructor() {
     super();
 
@@ -37,20 +44,35 @@ class Weather extends Component {
     this.setEvents();
   }
 
+  /**
+   * Set up event handlers for the component
+   */
   setEvents() {
+    // Click handler to swap temperature scale
     this.onclick = this.swapScale;
   }
 
+  /**
+   * Configure component dependencies and initial state
+   */
   setDependencies() {
     this.location = CONFIG.temperature.location;
     this.temperatureScale = CONFIG.temperature.scale;
     this.weatherForecast = new WeatherForecastClient(this.location);
   }
 
+  /**
+   * Define required external resources
+   * @returns {Array} Array of resource imports
+   */
   imports() {
     return [this.resources.icons.material, this.resources.fonts.roboto];
   }
 
+  /**
+   * Generate CSS styles for the weather component
+   * @returns {string} CSS style definitions
+   */
   style() {
     return `
       .weather-icon {
@@ -103,6 +125,10 @@ class Weather extends Component {
     `;
   }
 
+  /**
+   * Generate the HTML template for the weather component
+   * @returns {Promise<string>} HTML template string
+   */
   async template() {
     return `
         <p class="+ weather-temperature">
@@ -113,54 +139,95 @@ class Weather extends Component {
         </p>`;
   }
 
+  /**
+   * Convert Fahrenheit to Celsius
+   * @param {number} f Temperature in Fahrenheit
+   * @returns {number} Temperature in Celsius
+   */
   toC(f) {
     return Math.round(((f - 32) * 5) / 9);
   }
 
+  /**
+   * Convert Celsius to Fahrenheit
+   * @param {number} c Temperature in Celsius
+   * @returns {number} Temperature in Fahrenheit
+   */
   toF(c) {
     return Math.round((c * 9) / 5 + 32);
   }
 
+  /**
+   * Toggle temperature scale between Celsius and Fahrenheit
+   */
   swapScale() {
+    // Toggle between C and F
     this.temperatureScale = this.temperatureScale === "C" ? "F" : "C";
 
+    // Update configuration with new scale
     CONFIG.temperature = {
       ...CONFIG.temperature,
       scale: this.temperatureScale,
     };
 
+    // Update displayed temperature with new scale
     this.setTemperature();
   }
 
+  /**
+   * Convert temperature to the currently selected scale
+   * @param {number} temperature Temperature value in Celsius
+   * @returns {number} Temperature in selected scale
+   */
   convertScale(temperature) {
+    // Convert to Fahrenheit if selected, otherwise return Celsius
     if (this.temperatureScale === "F") return this.toF(temperature);
 
     return temperature;
   }
 
+  /**
+   * Fetch weather data and update display
+   */
   async setWeather() {
     this.weather = await this.weatherForecast.getWeather();
     this.setTemperature();
   }
 
+  /**
+   * Update temperature and condition display elements
+   */
   setTemperature() {
     const { temperature, condition } = this.weather;
     const { icon, color } = this.getForecast(condition);
 
+    // Update DOM elements with weather data
     this.refs.temperature = this.convertScale(temperature);
     this.refs.condition = icon;
     this.refs.scale = this.temperatureScale;
+    // Apply colour class for condition icon
     this.refs.condition.classList.add(color);
   }
 
+  /**
+   * Find matching forecast configuration for weather condition
+   * @param {string} condition Weather condition from API
+   * @returns {Object} Forecast configuration with icon and colour
+   */
   getForecast(condition) {
+    // Find matching forecast or fall back to first (cloudy)
     for (const forecast of this.forecasts) if (forecast.conditions.includes(condition)) return forecast;
 
     return this.forecasts[0];
   }
 
+  /**
+   * Component lifecycle method called when element is connected to DOM
+   */
   async connectedCallback() {
+    // Render component template
     await this.render();
+    // Fetch and display weather data
     await this.setWeather();
   }
 }

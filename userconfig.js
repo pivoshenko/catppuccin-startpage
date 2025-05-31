@@ -1,4 +1,4 @@
-// User configuration for the startpage. Update the palette, location, and your preferred tabs, categories, and links.
+// User configuration for the startpage - update the palette, location, and your preferred tabs, categories, and links
 
 // Define preferred palette for light and dark mode
 // Available themes: latte, frappe, mocha, macchiato
@@ -14,9 +14,17 @@ const default_configuration = {
     scale: "C",
   },
   clock: {
-    format: "h:i p",
+    format: "k:i p",
     icon_color: palette.maroon,
   },
+  additionalClocks: [
+    {
+      label: "UA",
+      timezone: "Europe/Kyiv",
+      format: "h:i",
+      icon_color: palette.peach,
+    },
+  ],
   search: {
     engines: {
       p: ["https://www.perplexity.ai/search/?q=", "PerplexityAI"],

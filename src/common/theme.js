@@ -2,17 +2,19 @@
 // Export functions to detect and handle system theme changes
 
 /**
- * Detects the user's system color scheme preference
+ * Detects the user's system colour scheme preference
  * @param {Object} lightTheme - The theme to use when in light mode
  * @param {Object} darkTheme - The theme to use when in dark mode
  * @returns {Object} The appropriate theme based on system preference
  */
 function getSystemTheme(lightTheme, darkTheme) {
-  // Check if the browser supports prefers-color-scheme media query
+  // Check if the browser supports prefers-colour-scheme media query
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    return darkTheme; // Dark mode detected
+    // Dark mode detected
+    return darkTheme;
   } else {
-    return lightTheme; // Light mode detected
+    // Light mode detected
+    return lightTheme;
   }
 }
 
@@ -34,7 +36,7 @@ function initThemeListener(lightTheme, darkTheme, onThemeChange) {
 }
 
 /**
- * Initializes theme system with auto-updating capabilities
+ * Initialise theme system with auto-updating capabilities
  * @param {Object} lightTheme - The theme to use when in light mode
  * @param {Object} darkTheme - The theme to use when in dark mode
  * @param {Function} onThemeChange - Optional callback for when the theme changes
@@ -48,6 +50,7 @@ function initThemeSystem(lightTheme, darkTheme, onThemeChange = null) {
   if (onThemeChange) {
     initThemeListener(lightTheme, darkTheme, onThemeChange);
   } else {
+    // Default to page reload if no callback specified
     initThemeListener(lightTheme, darkTheme, () => {
       window.location.reload();
     });

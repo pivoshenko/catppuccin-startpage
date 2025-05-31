@@ -1,27 +1,36 @@
+// Global registry of rendered components
 const RenderedComponents = {};
 
-// Base class for all startpage components, providing shadow DOM, resource management, and rendering utilities.
+// Base class for all startpage components, providing shadow DOM, resource management, and rendering utilities
 // Glossary: Component, Resource, Shadow DOM
 class Component extends HTMLElement {
+  // Element references for DOM manipulation
   refs = {};
 
   resources = {
+    /** Google Fonts and other web fonts */
     fonts: {
       roboto: '<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">',
       nunito: '<link href="https://fonts.googleapis.com/css?family=Nunito:200" rel="stylesheet">',
       raleway: '<link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">',
     },
+    /** Icon font libraries */
     icons: {
       material:
         '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">',
       cryptofont: '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/monzanifabio/cryptofont/cryptofont.css">',
       tabler: '<link rel="stylesheet" href="src/css/tabler-icons.min.css">',
     },
+    /** CSS libraries and frameworks */
     libs: {
       awoo: '<link rel="stylesheet" type="text/css" href="src/css/awoo.min.css">',
     },
   };
 
+  /**
+   * Initialise the component with shadow DOM
+   * Creates an open shadow root for style encapsulation
+   */
   constructor() {
     super();
 
@@ -30,21 +39,33 @@ class Component extends HTMLElement {
     });
   }
 
+  /**
+   * Returns custom styles for the component
+   * @returns {string|null} CSS styles or null
+   */
   style() {
     return null;
   }
 
+  /**
+   * Returns the HTML template for the component
+   * @returns {string|null} HTML template or null
+   */
   template() {
     return null;
   }
 
+  /**
+   * Returns array of external resources to import
+   * @returns {Array<string>} Array of resource imports
+   */
   imports() {
     return [];
   }
 
   /**
-   * Reference an external CSS file for the component.
-   * Note: External style loading is not fully supported with web components and may cause flickering.
+   * Reference an external CSS file for the component
+   * Note: External style loading is not fully supported with web components and may cause flickering
    * @param {string} path
    * @returns {void}
    */
@@ -53,7 +74,7 @@ class Component extends HTMLElement {
   }
 
   /**
-   * Return all the imports that a component requested.
+   * Return all the imports that a component requested
    * @returns {Array<string>} imports
    */
   get getResources() {
@@ -65,7 +86,7 @@ class Component extends HTMLElement {
   }
 
   /**
-   * Return inline style tag.
+   * Return inline style tag
    * @returns {string}
    */
   async loadStyles() {
@@ -77,7 +98,7 @@ class Component extends HTMLElement {
   }
 
   /**
-   * Build the component's HTML body.
+   * Build the component's HTML body
    * @returns {string} html
    */
   async buildHTML() {
@@ -85,7 +106,7 @@ class Component extends HTMLElement {
   }
 
   /**
-   * Create a reference proxy for manipulating DOM elements within the component's shadow DOM.
+   * Create a reference proxy for manipulating DOM elements within the component's shadow DOM
    * @returns {Proxy<HTMLElement | boolean>}
    */
   createRef() {
@@ -110,7 +131,7 @@ class Component extends HTMLElement {
   }
 
   /**
-   * Render the component's HTML and update references.
+   * Render the component's HTML and update references
    * @returns {Promise<void>}
    */
   async render() {

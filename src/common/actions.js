@@ -1,7 +1,7 @@
-// Provides actions for activating startpage components by name.
+// Provides actions for activating startpage components by name
 class Actions {
   /**
-   * Activate a registered component by its name.
+   * Activate a registered component by its name
    * @param {string} componentName
    * @returns {*}
    */
