@@ -47,9 +47,10 @@ class Clock extends Component {
         }
 
         .clock-label {
-            font-size: 7pt;
+            font: 300 9pt 'Roboto', sans-serif;
             color: ${CONFIG.palette.text};
-            margin-right: 5px;
+            margin-right: 2px;
+            letter-spacing: .5px;
             white-space: nowrap;
         }
 
