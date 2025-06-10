@@ -118,8 +118,8 @@ class Search extends Component {
    */
   imports() {
     return [
-      this.resources.fonts.roboto,
-      this.resources.icons.material
+      this.getFontResource('roboto'),
+      this.getIconResource('material')
     ];
   }
 

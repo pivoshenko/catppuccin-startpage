@@ -14,16 +14,24 @@ class Component extends HTMLElement {
       nunito: '<link href="https://fonts.googleapis.com/css?family=Nunito:200" rel="stylesheet">',
       raleway: '<link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">',
     },
+    /** Local font alternatives */
+    localFonts: {
+      roboto: '<link rel="stylesheet" href="src/fonts/roboto-local.css">',
+      nunito: '<link rel="stylesheet" href="src/fonts/nunito-local.css">',
+      raleway: '<link rel="stylesheet" href="src/fonts/raleway-local.css">',
+    },
     /** Icon font libraries */
     icons: {
       material:
         '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">',
+      materialLocal: '<link rel="stylesheet" href="src/fonts/material-icons-local.css">',
       cryptofont: '<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/monzanifabio/cryptofont/cryptofont.css">',
       tabler: '<link rel="stylesheet" href="src/css/tabler-icons.min.css">',
     },
     /** CSS libraries and frameworks */
     libs: {
       awoo: '<link rel="stylesheet" type="text/css" href="src/css/awoo.min.css">',
+      awooLocal: '<link rel="stylesheet" type="text/css" href="src/css/awoo-local.min.css">',
     },
   };
 
@@ -37,6 +45,42 @@ class Component extends HTMLElement {
     this.shadow = this.attachShadow({
       mode: "open",
     });
+  }
+
+  /**
+   * Get the appropriate font resource based on configuration
+   * @param {string} fontName - The name of the font (roboto, nunito, raleway)
+   * @returns {string} Font resource link
+   */
+  getFontResource(fontName) {
+    if (typeof CONFIG !== 'undefined' && CONFIG.localFonts) {
+      return this.resources.localFonts[fontName] || this.resources.fonts[fontName];
+    }
+    return this.resources.fonts[fontName];
+  }
+
+  /**
+   * Get the appropriate icon resource based on configuration
+   * @param {string} iconName - The name of the icon library (material, tabler, etc)
+   * @returns {string} Icon resource link
+   */
+  getIconResource(iconName) {
+    if (typeof CONFIG !== 'undefined' && CONFIG.localFonts && iconName === 'material') {
+      return this.resources.icons.materialLocal;
+    }
+    return this.resources.icons[iconName];
+  }
+
+  /**
+   * Get the appropriate library resource based on configuration
+   * @param {string} libName - The name of the library (awoo, etc)
+   * @returns {string} Library resource link
+   */
+  getLibraryResource(libName) {
+    if (typeof CONFIG !== 'undefined' && CONFIG.localFonts && libName === 'awoo') {
+      return this.resources.libs.awooLocal;
+    }
+    return this.resources.libs[libName];
   }
 
   /**
