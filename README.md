@@ -61,6 +61,8 @@ A minimalistic and customisable startpage featuring the [**Catppuccin palettes**
 > You can find icons for your bookmarks using [`tabler-icons`](https://tabler.io/icons).
 >
 > To reduce icon loading times, you may install the icon [font](src/fonts) locally and activate the option `"localIcons": true` in the configuration to disable remote styles.
+>
+> To improve privacy and loading performance, you can now use local fonts instead of Google Fonts CDN by setting `"localFonts": true` in your configuration. This feature stores all required fonts (Roboto, Nunito, Raleway, and Material Icons) locally in the repository, eliminating external requests to Google's servers.
 
 ### As Homepage
 

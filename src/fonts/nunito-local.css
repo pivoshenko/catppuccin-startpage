@@ -1,0 +1,7 @@
+/* Local Nunito font definitions */
+@font-face {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 200;
+    src: url('./nunito-200.ttf') format('truetype');
+}

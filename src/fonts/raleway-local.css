@@ -1,0 +1,7 @@
+/* Local Raleway font definitions */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    src: url('./raleway-600.ttf') format('truetype');
+}
