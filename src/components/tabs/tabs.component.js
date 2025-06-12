@@ -74,7 +74,7 @@ class Category extends Component {
    * @returns {string} CSS style attribute string
    */
   static getBackgroundStyle(url) {
-    return `style="background-image: url(${url}); background-repeat: no-repeat;background-size: contain;"`;
+    return `style="background-image: url(${url}); background-repeat: no-repeat; background-size: contain;"`;
   }
 
   /**
