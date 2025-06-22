@@ -31,6 +31,7 @@ const default_configuration = {
       d: ["https://duckduckgo.com/?q=", "DuckDuckGo"],
       g: ["https://google.com/search?q=", "Google"],
     },
+    default: "d",
   },
   keybindings: {
     "s": "search-bar",

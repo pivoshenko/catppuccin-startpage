@@ -508,7 +508,10 @@ class Search extends Component {
 
     let args = target.value.split(' ');
     let prefix = args[0];
-    let defaultEngine = this.engines['d'][0];
+
+    // Get default engine from config, fallback to 'd' if not specified
+    const defaultEngineKey = CONFIG.search.default || 'd';
+    let defaultEngine = this.engines[defaultEngineKey]?.[0] || this.engines['d'][0];
     let engine = defaultEngine;
 
     // Handle special keys first
