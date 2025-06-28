@@ -51,8 +51,8 @@ A minimalistic and customisable startpage featuring the [**Catppuccin palettes**
 
 1. Fork this repository and clone it
 2. Optionally remove the `.github` directory, as it contains only PR templates, issue labels, etc., that are linked to this repository
-3. Create [`userconfig.js`](userconfig.example.js):
-   - Set the desired palette: `latte / frappe / macchiato / mocha`
+3. Create [`userconfig.js`](userconfig.example.js) based on the example file:
+   - Set the desired palette: `latte`, `frappe`, `macchiato`, or `mocha`
    - Set your location for the weather widget
    - Update the number of tabs and their banners
    - Update bookmarks and quick links for those you use most
@@ -83,7 +83,7 @@ You can use different add-ons or extensions for this.
   <img src="assets/preview._searchbar.png"/>
 </p>
 
-The search dialogue allows you to display a search bar with various search engines defined in the configuration. To run search dialogue, simply press `s` and type your query or URL to jump to it seamlessly.
+The search dialogue allows you to display a search bar with various search engines defined in the configuration. To open the search dialogue, simply press `s` and type your query or URL to jump to it seamlessly.
 
 To select search engine, simply prefix the query with the corresponding `!<id>`. By default, the defined search engines are:
 
@@ -91,11 +91,11 @@ To select search engine, simply prefix the query with the corresponding `!<id>`.
 - `!g`: Google
 - `!d`: DuckDuckGo
 
-The default search engine can be set in the `userconfig.js` file:
+The default search engine can be set in the `userconfig.js` file (use the engine ID without the `!` prefix):
 
 ```javascript
 search: {
-  engine: "!d"
+  default: "d"
 }
 ```
 
@@ -112,7 +112,7 @@ You can configure the clock format and add additional time zones in your `userco
 
 ```javascript
 clock: {
-  format: "h:i", // 24-hour format
+  format: "k:i p", // 12-hour format with AM/PM (09:30 PM)
   icon_color: palette.maroon,
 },
 // Optional: Add multiple clocks for different time zones
@@ -120,7 +120,7 @@ additionalClocks: [
   {
     label: "NYC", // Label for the clock
     timezone: "America/New_York", // IANA timezone name (handles DST automatically)
-    format: "k:i p", // 12-hour format with leading zero (09:30 PM)
+    format: "h:i", // 24-hour format (21:30)
     locale: "en-US", // Locale for date/time formatting
     icon_color: palette.blue // Optional different icon color
   }
