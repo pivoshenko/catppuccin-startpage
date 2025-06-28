@@ -51,7 +51,7 @@ A minimalistic and customisable startpage featuring the [**Catppuccin palettes**
 
 1. Fork this repository and clone it
 2. Optionally remove the `.github` directory, as it contains only PR templates, issue labels, etc., that are linked to this repository
-3. Update [`userconfig.js`](userconfig.js):
+3. Create [`userconfig.js`](userconfig.example.js):
    - Set the desired palette: `latte / frappe / macchiato / mocha`
    - Set your location for the weather widget
    - Update the number of tabs and their banners
@@ -83,14 +83,21 @@ You can use different add-ons or extensions for this.
   <img src="assets/preview._searchbar.png"/>
 </p>
 
-
-The search dialogue allows you to display a search bar with various search engines defined in the configuration. To run search dialogue, simply press `s` and type your query.
+The search dialogue allows you to display a search bar with various search engines defined in the configuration. To run search dialogue, simply press `s` and type your query or URL to jump to it seamlessly.
 
 To select search engine, simply prefix the query with the corresponding `!<id>`. By default, the defined search engines are:
 
 - `!p`: PerplexityAI
 - `!g`: Google
-- `!d`: DuckDuckGo (default)
+- `!d`: DuckDuckGo
+
+The default search engine can be set in the `userconfig.js` file:
+
+```javascript
+search: {
+  engine: "!d"
+}
+```
 
 ### ⏰ Clock
 
