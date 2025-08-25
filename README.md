@@ -7,13 +7,16 @@
 
 <p align="center">
   <a href="https://github.com/pivoshenko/catppuccin-startpage/stargazers">
-    <img src="https://img.shields.io/github/stars/pivoshenko/catppuccin-startpage?style=for-the-badge&logo=starship&color=a6e3a1&logoColor=D9E0EE&labelColor=302D41">
+    <img src="https://img.shields.io/github/stars/pivoshenko/catppuccin-startpage?style=for-the-badge&logo=starship&color=c6a0f6&logoColor=cad3f5&labelColor=302d41">
   </a>
   <a href="https://github.com/pivoshenko/catppuccin-startpage/issues">
-    <img src="https://img.shields.io/github/issues/pivoshenko/catppuccin-startpage?style=for-the-badge&logo=gitbook&color=fab387&logoColor=D9E0EE&labelColor=302D41">
+    <img src="https://img.shields.io/github/issues/pivoshenko/catppuccin-startpage?style=for-the-badge&logo=gitbook&color=ed8796&logoColor=cad3f5&labelColor=302d41">
   </a>
   <a href="https://github.com/pivoshenko/catppuccin-startpage/contributors">
-    <img src="https://img.shields.io/github/contributors/pivoshenko/catppuccin-startpage?style=for-the-badge&logo=github&color=f38ba8&logoColor=D9E0EE&labelColor=302D41">
+    <img src="https://img.shields.io/github/contributors/pivoshenko/catppuccin-startpage?style=for-the-badge&logo=github&color=a6da95&logoColor=cad3f5&labelColor=302d41">
+  </a>
+  <a href="https://github.com/pivoshenko/catppuccin-startpage">
+      <img src="https://img.shields.io/github/repo-size/pivoshenko/catppuccin-startpage?style=for-the-badge&logo=hackthebox&color=8aadf4&logoColor=cad3f5&labelColor=302d41">
   </a>
 </p>
 
