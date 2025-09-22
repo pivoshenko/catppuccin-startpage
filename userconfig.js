@@ -3,14 +3,14 @@
 // Define preferred palette for light and dark mode
 // Available themes: latte, frappe, mocha, macchiato
 const preferredLightTheme = latte;
-const preferredDarkTheme = macchiato;
+const preferredDarkTheme = mocha;
 
 let palette = initThemeSystem(preferredLightTheme, preferredDarkTheme);
 
 const default_configuration = {
   overrideStorage: true,
   temperature: {
-    location: "London",
+    location: "Parepare",
     scale: "C",
   },
   clock: {
@@ -19,11 +19,13 @@ const default_configuration = {
   },
   additionalClocks: [
     {
-      label: "UA",
-      timezone: "Europe/Kyiv",
+      label: "Parepare",
+      timezone: "Asia/Makassar",
       format: "h:i",
       icon_color: palette.peach,
     },
+  ]
+
   ],
   search: {
     engines: {
