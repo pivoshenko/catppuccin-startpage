@@ -21,6 +21,12 @@
 </p>
 
 <p align="center">
+  <a href="https://stand-with-ukraine.pp.ua">
+    <img alt="StandWithUkraine" src="https://img.shields.io/badge/Support-Ukraine-FFC93C?style=for-the-badge&logoColor=cad3f5&labelColor=07689F">
+  </a>
+</p>
+
+<p align="center">
   <img src="assets/preview.png"/>
 </p>
 
