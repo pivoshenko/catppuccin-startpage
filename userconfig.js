@@ -154,6 +154,18 @@ const default_configuration = {
               icon: "brand-stackoverflow",
               icon_color: palette.red,
             },
+            {
+              name: "motherduck",
+              url: "https://app.motherduck.com",
+              icon: "file-type-sql",
+              icon_color: palette.mauve,
+            },
+            {
+              name: "collab",
+              url: "https://colab.research.google.com",
+              icon: "notebook",
+              icon_color: palette.flamingo,
+            },
           ],
         },
         {
