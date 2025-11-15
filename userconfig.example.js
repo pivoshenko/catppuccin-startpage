@@ -3,7 +3,7 @@
 // Define preferred palette for light and dark mode
 // Available themes: latte, frappe, mocha, macchiato
 const preferredLightTheme = latte;
-const preferredDarkTheme = macchiato;
+const preferredDarkTheme = mocha;
 
 let palette = initThemeSystem(preferredLightTheme, preferredDarkTheme);
 
@@ -154,6 +154,18 @@ const default_configuration = {
               icon: "brand-stackoverflow",
               icon_color: palette.red,
             },
+            {
+              name: "motherduck",
+              url: "https://app.motherduck.com",
+              icon: "file-type-sql",
+              icon_color: palette.mauve,
+            },
+            {
+              name: "collab",
+              url: "https://colab.research.google.com",
+              icon: "notebook",
+              icon_color: palette.flamingo,
+            },
           ],
         },
         {
@@ -247,8 +259,8 @@ const default_configuration = {
           name: "gaming",
           links: [
             {
-              name: "IGN",
-              url: "https://www.ign.com/account/playlist/library",
+              name: "InfiniteBacklog",
+              url: "https://infinitebacklog.net",
               icon: "device-gamepad",
               icon_color: palette.green,
             },
