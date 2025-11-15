@@ -259,8 +259,8 @@ const default_configuration = {
           name: "gaming",
           links: [
             {
-              name: "IGN",
-              url: "https://www.ign.com/account/playlist/library",
+              name: "InfiniteBacklog",
+              url: "https://infinitebacklog.net",
               icon: "device-gamepad",
               icon_color: palette.green,
             },
@@ -322,4 +322,4 @@ const CONFIG = new Config(default_configuration, palette);
 
 const root = document.querySelector(":root");
 root.style.setProperty("--bg", palette.mantle);
-root.style.setProperty("--accent", palette.green);
+root.style.setProperty("--accent", palette.blue);
