@@ -155,7 +155,7 @@ const default_configuration = {
               icon_color: palette.red,
             },
             {
-              name: "motherduck",
+              name: "duckdb",
               url: "https://app.motherduck.com",
               icon: "file-type-sql",
               icon_color: palette.mauve,
@@ -259,7 +259,7 @@ const default_configuration = {
           name: "gaming",
           links: [
             {
-              name: "InfiniteBacklog",
+              name: "infiniteBacklog",
               url: "https://infinitebacklog.net",
               icon: "device-gamepad",
               icon_color: palette.green,
