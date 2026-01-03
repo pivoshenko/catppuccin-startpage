@@ -64,6 +64,7 @@ class Clock extends Component {
         .clock-icon {
             font-size: 10pt;
             margin-right: 5px;
+            transform: translateY(-0.5px);
         }
 
         .clock-item {
