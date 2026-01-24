@@ -3,7 +3,7 @@
 // Define preferred palette for light and dark mode
 // Available themes: latte, frappe, mocha, macchiato
 const preferredLightTheme = latte;
-const preferredDarkTheme = mocha;
+const preferredDarkTheme = frappe;
 
 let palette = initThemeSystem(preferredLightTheme, preferredDarkTheme);
 
@@ -316,4 +316,4 @@ const CONFIG = new Config(default_configuration, palette);
 
 const root = document.querySelector(":root");
 root.style.setProperty("--bg", palette.mantle);
-root.style.setProperty("--accent", palette.blue);
+root.style.setProperty("--accent", palette.rosewater);
