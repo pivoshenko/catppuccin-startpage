@@ -213,9 +213,9 @@ const default_configuration = {
               icon_color: palette.red,
             },
             {
-              name: "netflix tech blog",
-              url: "https://netflixtechblog.com",
-              icon: "brand-netflix",
+              name: "pivoshenko.dev",
+              url: "https://www.pivoshenko.dev/",
+              icon: "world",
               icon_color: palette.blue,
             },
           ],
@@ -253,9 +253,9 @@ const default_configuration = {
           name: "gaming",
           links: [
             {
-              name: "infiniteBacklog",
-              url: "https://infinitebacklog.net",
-              icon: "device-gamepad",
+              name: "wallpapers",
+              url: "https://pivoshenkowallpapers.vercel.app",
+              icon: "photo",
               icon_color: palette.green,
             },
             {
