@@ -1,56 +1,67 @@
 name: Feature Request
 labels: ["type: enhancement"]
-description: Suggest an idea for this project
+description: Suggest an idea or improvement for this project
 
 body:
   - type: markdown
     attributes:
       value: |
-        Thank you for taking the time to file a complete feature request report.
-        If the issue is trivial, why not submit a pull request instead?
-        Feel free to use markdown syntax in text areas.
+        Thank you for suggesting an improvement.
+        Please describe the problem and the proposed solution with enough detail for maintainers to evaluate.
 
   - type: dropdown
     attributes:
-      label: Feature kind
+      label: Feature Type
       description: |
-        What best describes this feature?
+        What best describes this request?
       options:
-        - Brand new capability
-        - Change in the current behaviour
+        - New capability
+        - Improvement to existing behavior
+        - User experience improvement
+        - Performance improvement
         - Other
     validations:
       required: true
 
   - type: textarea
     attributes:
-      label: Is your feature request related to a problem? Please describe it
+      label: Problem Statement
       description: |
-        A clear and concise description of what the problem is.
-        If applicable, add screenshots to help explain your problem.
+        What problem are you trying to solve?
+        Describe the current pain point or limitation.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Proposed Solution
+      description: |
+        Describe the solution you would like to see.
+        Include examples, API shapes, or UX notes when relevant.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Alternatives Considered
+      description: |
+        Describe alternative solutions or workarounds you considered.
     validations:
       required: false
 
   - type: textarea
     attributes:
-      label: Describe the feature
-      description: |
-        Please describe the proposed feature, with as much pertinent information as you can.
-    validations:
-      required: true
-
-  - type: textarea
-    attributes:
       label: Impact
       description: |
-        Please describe the motivation for this feature. Explain, as best you can, how this would improve or impact users, and why it is important.
+        Who benefits from this change and how?
+        Include expected impact on usability, performance, or maintainability.
     validations:
-      required: true
+      required: false
 
   - type: textarea
     attributes:
-      label: Workarounds
+      label: Additional Context
       description: |
-        Is there a mitigation, workaround, or add-on that allows users to achieve the same functionality today?
+        Add mockups, references, related issues, or any extra context.
     validations:
       required: false
