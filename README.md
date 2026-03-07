@@ -30,25 +30,25 @@
   <img src="assets/preview.png"/>
 </p>
 
-# 🪴 Overview
+## 🪴 Overview
 
 A minimalistic and customisable startpage featuring the [**Catppuccin palettes**](https://catppuccin.com/palette). Designed for both aesthetics and functionality, with seamless hosting on GitHub Pages. This startpage is based on [`dawn`](https://github.com/b-coimbra/dawn), which offers additional functionality. I have refined the page to match my [`dotfiles`](https://github.com/pivoshenko/dotfiles); feel free to explore them as well.
 
-## 🧠 Main Principles
+### 🧠 Main Principles
 
 - Minimalism in all aspects
 - Consistency throughout the user interface and codebase
 - Simplicity in design and configuration
 - Unified style and reduced visual noise
 
-## 🎨 Supported Palettes
+### 🎨 Supported Palettes
 
 - Latte
 - Frappé
 - Macchiato
 - Mocha
 
-## ⭐ Features
+### ⭐ Features
 
 - Automatic theme switching based on system settings (light/dark mode)
 - Customisable startpage / bookmarks manager
@@ -56,7 +56,7 @@ A minimalistic and customisable startpage featuring the [**Catppuccin palettes**
 - Weather widget
 - Clock widget with 12/24-hour format and multiple time zones support
 
-# 🪵 Usage
+## 🪵 Usage
 
 1. Fork this repository and clone it
 2. Optionally remove the `.github` directory, as it contains only PR templates, issue labels, etc., that are linked to this repository
