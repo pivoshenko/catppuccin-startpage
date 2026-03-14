@@ -9,6 +9,11 @@ let palette = initThemeSystem(preferredLightTheme, preferredDarkTheme);
 
 const default_configuration = {
   overrideStorage: true,
+  crypto: {
+    currency: "USD",
+    coin: "ETH",
+    refreshIn: 15,
+  },
   temperature: {
     location: "London",
     scale: "C",
@@ -34,6 +39,7 @@ const default_configuration = {
     default: "d",
   },
   keybindings: {
+    "t": "todo-list",
     "s": "search-bar",
   },
   disabled: [],

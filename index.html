@@ -13,16 +13,21 @@
 </head>
 
 <body>
+  <modal-popup></modal-popup>
   <tabs-list></tabs-list>
+  <todo-list class="|" id="todo"></todo-list>
 
   <script type="text/javascript" src="src/common/palette.js"></script>
   <script type="text/javascript" src="src/common/utils.js"></script>
   <script type="text/javascript" src="src/common/storage.js"></script>
+  <script type="text/javascript" src="src/common/notify.js"></script>
   <script type="text/javascript" src="src/common/actions.js"></script>
   <script type="text/javascript" src="src/common/config.js"></script>
   <script type="text/javascript" src="src/common/strftime.js"></script>
   <script type="text/javascript" src="src/common/theme.js"></script>
   <script type="text/javascript" src="src/common/component.js"></script>
+
+  <script type="text/javascript" src="src/components/shared/modal/modal.component.js"></script>
 
   <script type="text/javascript" src="./userconfig.js"></script>
 
@@ -84,6 +89,16 @@
   </script>
 
   <script type="text/javascript" src="src/components/tabs/tabs.component.js"></script>
+
+  <script type="text/javascript" src="src/components/todo/task-priority.component.js"></script>
+  <script type="text/javascript" src="src/components/todo/task-edit.component.js"></script>
+  <script type="text/javascript" src="src/components/todo/task.component.js"></script>
+  <script type="text/javascript" src="src/components/todo/todo.component.js"></script>
+
+  <script type="text/javascript" src="src/components/crypto/crypto.api.js"></script>
+  <script type="text/javascript" src="src/components/crypto/crypto-diff.component.js"></script>
+  <script type="text/javascript" src="src/components/crypto/crypto-popup.component.js"></script>
+  <script type="text/javascript" src="src/components/crypto/crypto.component.js"></script>
 
   <script type="text/javascript" src="src/components/weather/weather.api.js"></script>
   <script type="text/javascript" src="src/components/weather/weather.component.js"></script>

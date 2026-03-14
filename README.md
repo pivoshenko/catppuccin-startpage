@@ -55,6 +55,8 @@ A minimalistic and customisable startpage featuring the [**Catppuccin palettes**
 - Search bar with multiple engines
 - Weather widget
 - Clock widget with 12/24-hour format and multiple time zones support
+- Todo list component (toggle with `t`)
+- Crypto components from upstream dawn (`crypto-rate`, `crypto-popup`, `crypto-diff`)
 
 ## 🪵 Usage
 

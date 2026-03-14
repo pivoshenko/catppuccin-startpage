@@ -3,6 +3,14 @@ class Config {
   defaults = {
     // Whether to override localStorage with config values
     overrideStorage: false,
+    crypto: {
+      // Fiat currency used for crypto conversion
+      currency: "USD",
+      // Main coin displayed in status bar
+      coin: "ETH",
+      // Refresh interval in minutes
+      refreshIn: 15,
+    },
     temperature: {
       // Default city for weather display
       location: "London",
@@ -52,6 +60,8 @@ class Config {
     tabs: [],
     // Keyboard shortcuts for actions
     keybindings: {
+      // 't' key opens todo panel
+      "t": "todo-list",
       // 's' key opens search bar
       "s": "search-bar",
     }
