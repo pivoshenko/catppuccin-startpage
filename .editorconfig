@@ -9,15 +9,3 @@ insert_final_newline = true
 max_line_length = 120
 tab_width = 2
 trim_trailing_whitespace = true
-
-[{*.py,*.pyi,*.ipynb}]
-indent_size = 4
-tab_width = 4
-
-[{*.mako,*.py.mako}]
-indent_size = 4
-tab_width = 4
-
-[justfile]
-indent_size = 4
-tab_width = 4
