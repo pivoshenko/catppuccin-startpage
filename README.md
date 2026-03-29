@@ -136,8 +136,6 @@ additionalClocks: [
 ],
 ```
 
-For full documentation of clock format options, [see](docs/CLOCK.md).
-
 ## 🖼️ Available Banners
 
 | banner_01                                           | banner_02                                           | banner_03                                           | banner_04                                           |
