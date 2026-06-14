@@ -46,6 +46,8 @@ class Config {
     },
     // List of disabled components
     disabled: [],
+    // URL to open when clicking the fastlink button in the statusbar
+    fastlink: "",
     // Whether to use local fonts instead of Google Fonts CDN
     localFonts: false,
     // Whether to restore last active tab on load
