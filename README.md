@@ -148,14 +148,18 @@ additionalClocks: [
 | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
 | <img src="src/img/banners/banner_01.gif" width=175> | <img src="src/img/banners/banner_02.gif" width=175> | <img src="src/img/banners/banner_03.gif" width=175> | <img src="src/img/banners/banner_04.gif" width=175> |
 
-| banner_05                                           | banner_06                                           | banner_07                                           | banner_11                                           |
+| banner_05                                           | banner_06                                           | banner_07                                           | banner_08                                           |
 | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
-| <img src="src/img/banners/banner_05.gif" width=175> | <img src="src/img/banners/banner_06.gif" width=175> | <img src="src/img/banners/banner_07.gif" width=175> | <img src="src/img/banners/banner_11.gif" width=175> |
+| <img src="src/img/banners/banner_05.gif" width=175> | <img src="src/img/banners/banner_06.gif" width=175> | <img src="src/img/banners/banner_07.gif" width=175> | <img src="src/img/banners/banner_08.gif" width=175> |
 
-| banner_12                                           | banner_13                                           | banner_14                                           | banner_15                                           |
+| banner_09                                           | banner_10                                           | banner_11                                           | banner_12                                           |
 | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
-| <img src="src/img/banners/banner_12.gif" width=175> | <img src="src/img/banners/banner_13.gif" width=175> | <img src="src/img/banners/banner_14.gif" width=175> | <img src="src/img/banners/banner_15.gif" width=175> |
+| <img src="src/img/banners/banner_09.gif" width=175> | <img src="src/img/banners/banner_10.gif" width=175> | <img src="src/img/banners/banner_11.gif" width=175> | <img src="src/img/banners/banner_12.gif" width=175> |
 
-| banner_16                                           | banner_17                                           | banner_18                                           |
-| --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
-| <img src="src/img/banners/banner_16.gif" width=175> | <img src="src/img/banners/banner_17.gif" width=175> | <img src="src/img/banners/banner_18.gif" width=175> |
+| banner_13                                           | banner_14                                           | banner_15                                           | banner_16                                           |
+| --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------- |
+| <img src="src/img/banners/banner_13.gif" width=175> | <img src="src/img/banners/banner_14.gif" width=175> | <img src="src/img/banners/banner_15.gif" width=175> | <img src="src/img/banners/banner_16.gif" width=175> |
+
+| banner_17                                           | banner_18                                           |
+| --------------------------------------------------- | --------------------------------------------------- |
+| <img src="src/img/banners/banner_17.gif" width=175> | <img src="src/img/banners/banner_18.gif" width=175> |
