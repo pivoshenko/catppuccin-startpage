@@ -25,9 +25,7 @@
 
   <script type="text/javascript" src="./userconfig.js"></script>
 
-  <!-- Font loading script -->
   <script type="text/javascript">
-    // Load fonts and CSS based on configuration
     function loadFonts() {
       const head = document.getElementsByTagName('head')[0];
 
@@ -39,7 +37,6 @@
         awooLink.href = 'src/css/awoo-local.min.css';
         head.appendChild(awooLink);
 
-        // Load local fonts
         const localFontLinks = [
           'src/fonts/roboto-local.css',
           'src/fonts/nunito-local.css',
@@ -62,7 +59,6 @@
         awooLink.href = 'src/css/awoo.min.css';
         head.appendChild(awooLink);
 
-        // Load Google Fonts
         const googleFontLinks = [
           'https://fonts.googleapis.com/css?family=Nunito:200|Roboto:100,400,700|Raleway:600',
           'https://fonts.googleapis.com/icon?family=Material+Icons'

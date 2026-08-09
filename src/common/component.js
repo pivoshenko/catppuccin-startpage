@@ -1,33 +1,26 @@
-// Global registry of rendered components
 const RenderedComponents = {};
 
 // Base class for all startpage components: shadow DOM, resource management, rendering
-// Glossary: Component, Resource, Shadow DOM
 class Component extends HTMLElement {
-  // Element references for DOM manipulation
   refs = {};
 
   resources = {
-    /** Google Fonts and other web fonts */
     fonts: {
       roboto: '<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,700" rel="stylesheet">',
       nunito: '<link href="https://fonts.googleapis.com/css?family=Nunito:200" rel="stylesheet">',
       raleway: '<link href="https://fonts.googleapis.com/css?family=Raleway:600" rel="stylesheet">',
     },
-    /** Local font alternatives */
     localFonts: {
       roboto: '<link rel="stylesheet" href="src/fonts/roboto-local.css">',
       nunito: '<link rel="stylesheet" href="src/fonts/nunito-local.css">',
       raleway: '<link rel="stylesheet" href="src/fonts/raleway-local.css">',
     },
-    /** Icon font libraries */
     icons: {
       material:
         '<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">',
       materialLocal: '<link rel="stylesheet" href="src/fonts/material-icons-local.css">',
       tabler: '<link rel="stylesheet" href="src/css/tabler-icons.min.css">',
     },
-    /** CSS libraries and frameworks */
     libs: {
       awoo: '<link rel="stylesheet" type="text/css" href="src/css/awoo.min.css">',
       awooLocal: '<link rel="stylesheet" type="text/css" href="src/css/awoo-local.min.css">',

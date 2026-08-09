@@ -1,6 +1,5 @@
 // Clock component for displaying main time and additional timezone clocks
 class Clock extends Component {
-  // References to DOM elements for the clock component
   refs = {
     clockContainer: ".clock-container",
     icon: ".clock-icon",

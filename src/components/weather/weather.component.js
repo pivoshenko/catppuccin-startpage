@@ -1,7 +1,6 @@
 
 // Weather component, shows the current temperature and a condition icon
 class Weather extends Component {
-  // DOM element selectors for weather display elements
   refs = {
     temperature: ".weather-temperature-value",
     condition: ".weather-condition-icon",

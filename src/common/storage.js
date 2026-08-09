@@ -2,7 +2,6 @@
  * Storage wraps localStorage access for configuration and state
  */
 class Storage {
-  // The localStorage key for this storage instance
   key;
 
   /**

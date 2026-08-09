@@ -100,7 +100,6 @@ class Category extends Component {
  * Main tabs component for displaying categorised links and navigation
  */
 class Tabs extends Component {
-  // CSS selector references for DOM elements
   refs = {};
 
   /**

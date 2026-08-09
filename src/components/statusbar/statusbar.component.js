@@ -1,10 +1,8 @@
 
 // Statusbar component for tab navigation and widgets
 class Statusbar extends Component {
-  // External DOM element references
   externalRefs = {};
 
-  // CSS selector references for DOM elements
   refs = {
     categories: ".categories ul",
     tabs: "#tabs ul li",
@@ -12,7 +10,6 @@ class Statusbar extends Component {
     fastlink: ".fastlink",
   };
 
-  // Currently active tab index
   currentTabIndex = 0;
 
   /**

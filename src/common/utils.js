@@ -1,4 +1,3 @@
-// Shorthand destructuring for JSON methods
 const { parse, stringify } = JSON;
 
 /**

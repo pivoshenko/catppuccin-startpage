@@ -1,6 +1,5 @@
 // Search component, supports multiple search engines
 class Search extends Component {
-  // References to DOM elements for the search component
   refs = {
     search: '#search',
     input: '#search input[type="text"]',

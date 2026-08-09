@@ -1,4 +1,3 @@
-// Actions for activating startpage components by name
 class Actions {
   /**
    * Activate a registered component by its name
