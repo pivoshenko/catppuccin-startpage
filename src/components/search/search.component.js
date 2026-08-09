@@ -174,7 +174,6 @@ class Search extends Component {
    * @returns {boolean} True if the input is a valid URL
    */
   isValidUrl(input) {
-    // Check for common URL patterns
     const urlPatterns = [
       // Domain with TLD (e.g., google.com, github.com)
       /^([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}(\/.*)?$/,
@@ -199,22 +198,18 @@ class Search extends Component {
   formatUrl(url) {
     url = url.trim();
 
-    // If it already has a protocol, use as is
     if (/^https?:\/\//.test(url)) {
       return url;
     }
 
-    // If it starts with www, add https
     if (/^www\./.test(url)) {
       return `https://${url}`;
     }
 
-    // If it's localhost or IP, use http by default
     if (/^localhost/.test(url) || /^(\d{1,3}\.){3}\d{1,3}/.test(url)) {
       return `http://${url}`;
     }
 
-    // For domain names, add https
     return `https://${url}`;
   }
 
@@ -229,7 +224,6 @@ class Search extends Component {
     let args = target.value.split(' ');
     let prefix = args[0];
 
-    // Get default engine from config, fallback to 'd' if not specified
     const defaultEngineKey = CONFIG.search.default || 'd';
     let engine = this.engines[defaultEngineKey]?.[0] || this.engines['d'][0];
 
@@ -249,7 +243,6 @@ class Search extends Component {
     if (key === 'Enter') {
       const fullInput = target.value.trim();
 
-      // Check if input is a URL first
       if (this.isValidUrl(fullInput)) {
         window.location = this.formatUrl(fullInput);
         return;
@@ -261,7 +254,6 @@ class Search extends Component {
         args = args.slice(1);
       }
 
-      // Navigate to search results
       window.location = engine + encodeURI(args.join(' '));
     }
   }

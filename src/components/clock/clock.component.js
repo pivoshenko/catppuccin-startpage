@@ -126,7 +126,6 @@ class Clock extends Component {
         mainIcon.style.color = CONFIG.clock.icon_color;
       }
 
-      // Set colours for additional clock icons if they exist
       if (CONFIG.additionalClocks && CONFIG.additionalClocks.length) {
         CONFIG.additionalClocks.forEach((clock, index) => {
           const additionalIcon = this.shadow.querySelector(`.additional-icon-${index}`);
@@ -144,14 +143,12 @@ class Clock extends Component {
    */
   setTime() {
     if (this.shadow) {
-      // Update main clock
       const mainClockElement = this.shadow.querySelector('#main-clock .clock-time');
       const date = new Date();
       if (mainClockElement) {
         mainClockElement.textContent = date.strftime(CONFIG.clock.format, CONFIG.clock.locale);
       }
 
-      // Update additional clocks if they exist
       if (CONFIG.additionalClocks && CONFIG.additionalClocks.length) {
         CONFIG.additionalClocks.forEach((clock, index) => {
           const clockElement = this.shadow.querySelector(`#additional-clock-${index} .clock-time`);

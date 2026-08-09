@@ -10,10 +10,8 @@
 function getSystemTheme(lightTheme, darkTheme) {
   // Check if the browser supports prefers-colour-scheme media query
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    // Dark mode detected
     return darkTheme;
   } else {
-    // Light mode detected
     return lightTheme;
   }
 }
@@ -43,14 +41,12 @@ function initThemeListener(lightTheme, darkTheme, onThemeChange) {
  * @returns {Object} The current theme based on system preference
  */
 function initThemeSystem(lightTheme, darkTheme, onThemeChange = null) {
-  // Get initial theme
   const initialTheme = getSystemTheme(lightTheme, darkTheme);
 
   // Set up listener with default page reload if no callback provided
   if (onThemeChange) {
     initThemeListener(lightTheme, darkTheme, onThemeChange);
   } else {
-    // Default to page reload if no callback specified
     initThemeListener(lightTheme, darkTheme, () => {
       window.location.reload();
     });

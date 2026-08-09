@@ -284,7 +284,6 @@ class Statusbar extends Component {
 
     if (target.shadow && target.shadow.activeElement) return;
 
-    // Find currently active tab
     let activeTab = -1;
     this.refs.tabs.forEach((tab, index) => {
       if (tab.getAttribute("active") === "") {
@@ -292,7 +291,6 @@ class Statusbar extends Component {
       }
     });
 
-    // Navigate to next or previous tab based on wheel direction
     if (wheelDelta > 0) {
       this.activateByKey((activeTab + 1) % (this.refs.tabs.length - 1));
     } else {
