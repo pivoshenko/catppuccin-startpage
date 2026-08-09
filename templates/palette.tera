@@ -5,7 +5,7 @@ whiskers:
 ---
 
 // Catppuccin palette definitions for startpage theming
-// Each palette provides a set of named colour values for consistent customisation
+// Each palette is a set of named colour values
 
 {%- for id, flavor in flavors %}
 const {{ id}} = {

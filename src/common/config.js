@@ -8,7 +8,7 @@ class Config {
       location: "London",
       // Temperature scale: C for Celsius, F for Fahrenheit
       scale: "C",
-      // OpenWeatherMap API key — leave empty to disable the weather widget
+      // OpenWeatherMap API key, leave empty to disable the weather widget
       appId: "",
     },
     clock: {

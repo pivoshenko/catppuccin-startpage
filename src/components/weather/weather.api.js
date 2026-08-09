@@ -1,6 +1,6 @@
 /**
- * WeatherForecastClient provides weather data for the startpage using OpenWeatherMap API
- * Handles fetching and parsing weather information for a given location
+ * WeatherForecastClient fetches and parses weather data for a given location
+ * from the OpenWeatherMap API
  */
 class WeatherForecastClient {
   /**

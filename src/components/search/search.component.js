@@ -1,4 +1,4 @@
-// Search component for handling search functionality with multiple engines
+// Search component, supports multiple search engines
 class Search extends Component {
   // References to DOM elements for the search component
   refs = {

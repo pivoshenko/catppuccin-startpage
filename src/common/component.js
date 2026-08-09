@@ -1,7 +1,7 @@
 // Global registry of rendered components
 const RenderedComponents = {};
 
-// Base class for all startpage components, providing shadow DOM, resource management, and rendering utilities
+// Base class for all startpage components: shadow DOM, resource management, rendering
 // Glossary: Component, Resource, Shadow DOM
 class Component extends HTMLElement {
   // Element references for DOM manipulation
@@ -34,7 +34,7 @@ class Component extends HTMLElement {
     },
   };
 
-  // Map of (category, name) → local-variant key, applied when CONFIG.localFonts is true
+  // Map of (category, name) -> local-variant key, applied when CONFIG.localFonts is true
   static localOverrides = {
     "fonts.roboto": ["localFonts", "roboto"],
     "fonts.nunito": ["localFonts", "nunito"],

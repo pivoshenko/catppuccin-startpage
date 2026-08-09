@@ -1,5 +1,5 @@
-// Module for registering all startpage components as custom elements
-// Ensures that only enabled components are registered, based on the configuration
+// Registers all startpage components as custom elements
+// Components listed as disabled in the configuration are skipped
 
 // Map of component tag names to their corresponding classes
 const components = {

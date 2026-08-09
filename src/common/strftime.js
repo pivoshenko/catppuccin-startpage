@@ -14,7 +14,7 @@ new Date().strftime("do B Y")    => 18th January 2018
 new Date().strftime("h:i p")     => 09:32 PM (12-hour format)
 new Date().strftime("K:i p")     => 9:32 PM (12-hour format without leading zero)
 
-This function extends Date.prototype and provides flexible date formatting for the startpage
+This function extends Date.prototype with the date formatting used by the startpage
 */
 
 // Create a date object for a specific timezone using IANA timezone names
@@ -57,7 +57,7 @@ Date.createWithTimezone = function (timezone = null) {
   );
 };
 
-// Add ability to create a Date with a specific timezone offset in hours (legacy method)
+// Create a Date with a specific timezone offset in hours (legacy method)
 Date.createWithTimezoneOffset = function (timezoneOffsetHours = 0) {
   const localDate = new Date();
 
@@ -71,7 +71,7 @@ Date.createWithTimezoneOffset = function (timezoneOffsetHours = 0) {
   return new Date(localDate.getTime() + targetOffsetMs);
 };
 
-// Extended Date prototype with strftime functionality for flexible date formatting
+// Extend the Date prototype with strftime-style formatting
 Date.prototype.strftime = function (format = "c", locale = "en-US") {
   const date = this;
 
