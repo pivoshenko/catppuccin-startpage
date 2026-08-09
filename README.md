@@ -32,14 +32,14 @@
 
 ## 🪴 Overview
 
-A minimalistic and customisable startpage featuring the [**Catppuccin palettes**](https://catppuccin.com/palette). Designed for both aesthetics and functionality, with seamless hosting on GitHub Pages. This startpage is based on [`dawn`](https://github.com/b-coimbra/dawn), which offers additional functionality. I have refined the page to match my [`dotfiles`](https://github.com/pivoshenko/dotfiles); feel free to explore them as well.
+A minimalistic and customisable startpage that uses the [**Catppuccin palettes**](https://catppuccin.com/palette). It hosts on GitHub Pages. The page is based on [`dawn`](https://github.com/b-coimbra/dawn), which has more functionality than this version; I pared it down to match my [`dotfiles`](https://github.com/pivoshenko/dotfiles), so have a look at those too.
 
 ### 🧠 Main Principles
 
-- Minimalism in all aspects
-- Consistency throughout the user interface and codebase
-- Simplicity in design and configuration
-- Unified style and reduced visual noise
+- Minimal in all aspects
+- Consistent user interface and codebase
+- Simple design and configuration
+- One style, little visual noise
 
 ### 🎨 Supported Palettes
 
@@ -70,7 +70,7 @@ A minimalistic and customisable startpage featuring the [**Catppuccin palettes**
 > [!TIP]
 > You can find icons for your bookmarks using [`tabler-icons`](https://tabler.io/icons).
 >
-> To reduce icon loading times, you may install the icon [font](src/fonts) locally and activate the option `"localIcons": true` in the configuration to disable remote styles. Similarly, set `"localFonts": true` to serve all fonts from the repository instead of the Google Fonts CDN.
+> To cut icon loading times, install the icon [font](src/fonts) locally and set `"localIcons": true` in the configuration to disable remote styles. Set `"localFonts": true` to serve all fonts from the repository instead of the Google Fonts CDN.
 
 ### As Homepage
 
@@ -96,9 +96,9 @@ To regenerate the palette CSS, run `just build` (requires [`whiskers`](https://g
   <img src="assets/preview.searchbar.png"/>
 </p>
 
-The search dialogue allows you to display a search bar with various search engines defined in the configuration. To open the search dialogue, simply press `s` and type your query or URL to jump to it seamlessly.
+The search dialogue is a search bar wired to the search engines defined in the configuration. Press `s` to open it, then type a query, or a URL to jump straight there.
 
-To select search engine, simply prefix the query with the corresponding `!<id>`. By default, the defined search engines are:
+To pick an engine, prefix the query with its `!<id>`. The engines defined by default are:
 
 - `!p`: PerplexityAI
 - `!g`: Google
@@ -114,14 +114,14 @@ search: {
 
 ### ⏰ Clock
 
-The startpage now features an enhanced clock component with:
+The clock component supports:
 
-- Support for 12-hour and 24-hour time formats
+- 12-hour and 24-hour time formats
 - Multiple clocks for different time zones
-- Customisable formatting options
-- Locale support for regional time display
+- Customisable formatting
+- Locales for regional time display
 
-The `format` string uses strftime-like tokens (`k`, `i`, `p`, `h`, `H`) — see [`src/common/strftime.js`](src/common/strftime.js) for the full reference.
+The `format` string uses strftime-like tokens (`k`, `i`, `p`, `h`, `H`). See [`src/common/strftime.js`](src/common/strftime.js) for the full reference.
 
 You can configure the clock format and add additional time zones in your `userconfig.js`:
 
