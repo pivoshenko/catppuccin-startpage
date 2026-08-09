@@ -2,7 +2,7 @@
 
 Thank you for taking the time to contribute.
 
-These guidelines are intended to make contributions consistent and easy to review across repositories. They are guidance, not hard rules, and maintainers may adapt them when needed.
+These guidelines keep contributions consistent and easy to review. They are guidance, not hard rules, and maintainers may adapt them when needed.
 
 ## Reporting Bugs
 
@@ -51,7 +51,7 @@ Concrete examples, API sketches, UI mockups, or references are helpful when rele
 2. Set up the project using the repository's README or development docs.
 3. Run the project's tests and quality checks locally before opening a pull request.
 
-When a repository includes helper scripts or task runners, prefer using those documented commands.
+When a repository includes helper scripts or task runners, prefer those documented commands.
 
 > [!IMPORTANT]
 > Behavioral code changes should include or update tests.
@@ -70,7 +70,7 @@ docs/update-sync-flow-diagram
 refactor/mcps-schema-alignment
 ```
 
-A branch covering multiple unrelated changes should be split — one concern per branch makes review and bisect much easier.
+A branch covering multiple unrelated changes should be split. One concern per branch makes review and bisect much easier.
 
 ### Commits
 
@@ -86,10 +86,10 @@ This project follows [Conventional Commits](https://www.conventionalcommits.org/
 [optional body]
 ```
 
-- **type** — one of the prefixes from the table below
-- **scope** — the module, command, or area being changed (e.g. `sync`, `mcps`, `github`, `landing`, `config`); omit when the change is truly cross-cutting
-- **subject** — imperative mood, lowercase, no trailing period, 72 characters or fewer
-- **body** — optional; use it to explain *why*, not *what*; wrap at 72 characters
+- **type**: one of the prefixes from the table below
+- **scope**: the module, command, or area being changed (e.g. `sync`, `mcps`, `github`, `landing`, `config`); omit when the change is truly cross-cutting
+- **subject**: imperative mood, lowercase, no trailing period, 72 characters or fewer
+- **body**: optional; use it to explain *why*, not *what*; wrap at 72 characters
 
 **Type prefixes**
 

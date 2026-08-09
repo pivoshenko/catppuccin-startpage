@@ -32,7 +32,7 @@
 
 ## 🪴 Overview
 
-A minimalistic and customisable startpage that uses the [**Catppuccin palettes**](https://catppuccin.com/palette). It hosts on GitHub Pages. The page is based on [`dawn`](https://github.com/b-coimbra/dawn), which has more functionality than this version; I pared it down to match my [`dotfiles`](https://github.com/pivoshenko/dotfiles), so have a look at those too.
+A minimalistic and customisable startpage that uses the [**Catppuccin palettes**](https://catppuccin.com/palette). It is hosted on GitHub Pages. The page is based on [`dawn`](https://github.com/b-coimbra/dawn), which has more functionality than this version; I pared it down to match my [`dotfiles`](https://github.com/pivoshenko/dotfiles), so have a look at those too.
 
 ### 🧠 Main Principles
 
@@ -96,7 +96,7 @@ To regenerate the palette CSS, run `just build` (requires [`whiskers`](https://g
   <img src="assets/preview.searchbar.png"/>
 </p>
 
-The search dialogue is a search bar wired to the search engines defined in the configuration. Press `s` to open it, then type a query, or a URL to jump straight there.
+The search dialogue is wired to the search engines defined in the configuration. Press `s` to open it, then type a query, or a URL to jump straight there.
 
 To pick an engine, prefix the query with its `!<id>`. The engines defined by default are:
 

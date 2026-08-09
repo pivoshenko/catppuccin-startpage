@@ -1,10 +1,10 @@
 # Security Policy
 
-## Supported versions
+## Supported Versions
 
 Only the latest release series is supported for security fixes.
 
-## Reporting a vulnerability
+## Reporting a Vulnerability
 
 Please do not open public issues for suspected vulnerabilities.
 
@@ -16,4 +16,4 @@ Include:
 - reproduction steps
 - impact assessment
 
-We will acknowledge within 72 hours and provide remediation timeline after triage.
+We will acknowledge within 72 hours and provide a remediation timeline after triage.

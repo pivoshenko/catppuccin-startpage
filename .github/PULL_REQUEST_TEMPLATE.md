@@ -1,6 +1,6 @@
 # Pull Request Checklist
 
-<!-- Optional — uncomment if this PR closes an issue -->
+<!-- Optional: uncomment if this PR closes an issue -->
 <!-- Resolves: #issue-number-here -->
 
 ## Summary
