@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A static, dependency-free browser startpage (Catppuccin-themed) served from GitHub Pages. Vanilla JS Web Components, no bundler, no package manager, no test suite, no linter. Everything ships as-is from the repo root; `.nojekyll` disables Jekyll processing.
+A static, dependency-free browser startpage (Catppuccin-themed) served from GitHub Pages. Vanilla JS Web Components — no bundler, no package manager, no test suite, no linter, no CI. Everything ships as-is from the repo root; `.nojekyll` disables Jekyll processing. `.github/` holds only issue templates and a PR template.
 
 ## Commands
 
@@ -23,7 +23,7 @@ cp userconfig.example.js userconfig.js
 
 `userconfig.js` is untracked and **not** in `.gitignore`; it is loaded by `index.html` and must exist locally. Do not commit it.
 
-There are no tests and no lint step. The only CI is `.github/workflows/labels.yaml`, which syncs GitHub labels from `.github/labels.yaml`.
+There are no test, lint, or deploy commands — GitHub Pages serves the repo root directly.
 
 ## Architecture
 
@@ -48,7 +48,7 @@ Styles are template literals that interpolate `CONFIG.palette.*` at render time,
 
 - `Statusbar.setDependencies()` reaches out through `this.parentNode.querySelectorAll(".categories ul")` to get the tab panels it drives (`externalRefs.categories`).
 - `Actions.activate(tagName)` looks up `RenderedComponents[tagName]` and calls its `activate()`. `CONFIG.keybindings` maps a key to a **custom element tag name** (default `"s": "search-bar"`), so any component reachable by keybinding must implement `activate()`.
-- Tab switching (click, number keys 1-5, wheel) lives entirely in `statusbar.component.js`; `openLastVisitedTab` persists the index to `localStorage.lastVisitedTab`.
+- Tab switching (click, number keys, wheel) lives entirely in `statusbar.component.js`; `openLastVisitedTab` persists the index to `localStorage.lastVisitedTab`.
 
 **Configuration** (`src/common/config.js`)
 
@@ -62,9 +62,13 @@ Generated — do not hand-edit. It comes from `templates/palette.tera` via `just
 
 `CONFIG.localFonts` is the single switch. `Component.localOverrides` remaps `fonts.roboto` / `fonts.nunito` / `fonts.raleway` / `icons.material` / `libs.awoo` to their `*-local` equivalents inside `getResource()`. Note: `localIcons` appears in `userconfig.example.js` and the README but is **not read anywhere in the code** — tabler icons are always served locally.
 
+**Search** (`src/components/search/`)
+
+Overlay opened by the `s` keybinding. A `!<id>` prefix in the query picks an engine from `CONFIG.search.engines`; otherwise `CONFIG.search.default` (falling back to `d`, DuckDuckGo) is used.
+
 **Clock formatting** (`src/common/strftime.js`)
 
-Non-standard, percent-free strftime that patches `Date.prototype.strftime(format, locale)`. Hour tokens are easy to confuse: `h` = 24h padded, `H` = 24h unpadded, `k` = 12h padded, `K` = 12h unpadded, `i` = padded minutes, `p`/`P` = AM-PM / am-pm. Additional time zones come from `CONFIG.additionalClocks` (IANA names, DST handled by `toLocaleString`).
+Non-standard, percent-free strftime that patches `Date.prototype.strftime(format, locale)`. Hour tokens are easy to confuse: `h` = 24h padded, `H` = 24h unpadded, `k` = 12h padded, `K` = 12h unpadded, `i` = padded minutes, `p`/`P` = AM-PM / am-pm. Additional time zones come from `CONFIG.additionalClocks` (IANA names, DST handled via `Intl.DateTimeFormat`).
 
 **Weather** (`src/components/weather/`)
 
