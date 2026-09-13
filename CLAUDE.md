@@ -9,10 +9,15 @@ A static, dependency-free browser startpage (Catppuccin-themed) served from GitH
 ## Commands
 
 ```sh
-just dev          # python3 -m http.server 8000, then open http://localhost:8000
+just run-dev-server          # python3 -m http.server 8000, then open http://localhost:8000
 just build        # regenerate src/common/palette.js from templates/palette.tera (needs whiskers)
 just install      # cargo install catppuccin-whiskers
-just build-awoo   # regenerate src/css/awoo.min.css from src/css/awoo-local.min.css
+just build-awoo-css   # regenerate src/css/awoo.min.css from src/css/awoo-local.min.css
+just format       # no-op: no formatter is configured for this repo
+just lint         # no-op: no linter is configured for this repo
+just test         # no-op while the .no-tests sentinel exists
+just check        # lint + test + build
+just update       # cargo install catppuccin-whiskers
 ```
 
 First-run setup (required — the page is blank without it):
@@ -56,7 +61,7 @@ Styles are template literals that interpolate `CONFIG.palette.*` at render time,
 
 **Palette** (`src/common/palette.js`)
 
-Generated — do not hand-edit. It comes from `templates/palette.tera` via `just build` (catppuccin `whiskers`, version pinned in the template frontmatter). Change the template, not the output. Same rule for `src/css/awoo.min.css`: the source of truth is `awoo-local.min.css`, and `just build-awoo` regenerates the CDN variant by prepending the Google Fonts `@import`.
+Generated — do not hand-edit. It comes from `templates/palette.tera` via `just build` (catppuccin `whiskers`, version pinned in the template frontmatter). Change the template, not the output. Same rule for `src/css/awoo.min.css`: the source of truth is `awoo-local.min.css`, and `just build-awoo-css` regenerates the CDN variant by prepending the Google Fonts `@import`.
 
 **Local vs CDN assets**
 
