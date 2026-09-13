@@ -1,7 +1,5 @@
 /*
-+----------+
-| STRFTIME |
-+----------+
+== Strftime ==
 Author: https://github.com/b-coimbra
 Description:
 A simple strftime function implementation in JavaScript, without the percentage notation
