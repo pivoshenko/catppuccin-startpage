@@ -133,7 +133,7 @@ class Config {
     document.addEventListener("keydown", ({ key }) => {
       if (document.activeElement !== document.body) return;
 
-      if (key in this.config.keybindings) Actions.activate(this.config.keybindings[key]);
+      if (key in this.keybindings) Actions.activate(this.keybindings[key]);
     });
   }
 

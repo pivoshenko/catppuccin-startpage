@@ -60,7 +60,7 @@ The constructor returns a `Proxy`, so any assignment to a `CONFIG` property re-p
 
 `userconfig.js` is a user file that is not in the repo; `userconfig.example.js` is the template and the de-facto documentation of the schema.
 
-Two known traps, so they are not mistaken for something a change broke: `Config.setKeybindings` reads the raw userconfig object rather than the merged `CONFIG`, so a `userconfig.js` with no `keybindings` key throws there; and `localIcons` appears in `userconfig.example.js` and the README but is read nowhere in the source.
+One known trap, so it is not mistaken for something a change broke: `localIcons` appears in `userconfig.example.js` and the README but is read nowhere in the source.
 
 ### Theme switching
 
