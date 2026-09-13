@@ -2,9 +2,9 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## What this is
+## What This Is
 
-A static, dependency-free browser startpage (Catppuccin-themed) served from GitHub Pages. Vanilla JS Web Components — no bundler, no package manager, no test suite, no linter, no CI. Everything ships as-is from the repo root; `.nojekyll` disables Jekyll processing. `.github/` holds only issue templates and a PR template.
+A static, dependency-free browser startpage (Catppuccin-themed) served from GitHub Pages. Vanilla JS Web Components - no bundler, no package manager, no test suite, no linter, no CI. Everything ships as-is from the repo root; `.nojekyll` disables Jekyll processing. `.github/` holds only issue templates and a PR template.
 
 ## Commands
 
@@ -20,7 +20,7 @@ just check        # lint + test + build
 just update       # cargo install catppuccin-whiskers
 ```
 
-First-run setup (required — the page is blank without it):
+First-run setup (required - the page is blank without it):
 
 ```sh
 cp userconfig.example.js userconfig.js
@@ -28,18 +28,18 @@ cp userconfig.example.js userconfig.js
 
 `userconfig.js` is untracked and **not** in `.gitignore`; it is loaded by `index.html` and must exist locally. Do not commit it.
 
-There are no test, lint, or deploy commands — GitHub Pages serves the repo root directly.
+There are no test, lint, or deploy commands - GitHub Pages serves the repo root directly.
 
 ## Architecture
 
-Scripts are plain `<script>` tags in `index.html` — **no modules, no imports; everything is a global and load order is load-bearing.** Adding a new file means adding a `<script>` tag in the correct slot: `src/common/*` first, then `userconfig.js` (which constructs `CONFIG`), then components, then `src/common/module.js` last.
+Scripts are plain `<script>` tags in `index.html` - **no modules, no imports; everything is a global and load order is load-bearing.** Adding a new file means adding a `<script>` tag in the correct slot: `src/common/*` first, then `userconfig.js` (which constructs `CONFIG`), then components, then `src/common/module.js` last.
 
 **Boot sequence**
 
-1. `src/common/*.js` define globals: `palette` flavours, `Storage`, `Actions`, `Config`, `strftime`, `initThemeSystem`, `Component`.
-2. `userconfig.js` calls `initThemeSystem(light, dark)` to pick a palette from `prefers-color-scheme`, builds `const CONFIG = new Config(default_configuration, palette)`, and sets the `--bg` / `--accent` CSS vars on `:root`.
-3. An inline script in `index.html` reads `CONFIG.localFonts` to load either CDN or local font/awoo stylesheets.
-4. Component classes are defined, then `module.js` registers them as custom elements, skipping anything in `CONFIG.disabled`.
+1. `src/common/*.js` define globals: `palette` flavours, `Storage`, `Actions`, `Config`, `strftime`, `initThemeSystem`, `Component`
+2. `userconfig.js` calls `initThemeSystem(light, dark)` to pick a palette from `prefers-color-scheme`, builds `const CONFIG = new Config(default_configuration, palette)`, and sets the `--bg` / `--accent` CSS vars on `:root`
+3. An inline script in `index.html` reads `CONFIG.localFonts` to load either CDN or local font/awoo stylesheets
+4. Component classes are defined, then `module.js` registers them as custom elements, skipping anything in `CONFIG.disabled`
 
 **Component contract** (`src/common/component.js`)
 
@@ -51,9 +51,9 @@ Styles are template literals that interpolate `CONFIG.palette.*` at render time,
 
 `<tabs-list>` is the only element in `index.html`. Its shadow DOM contains `<search-bar>` and `<status-bar>`; `<status-bar>` in turn embeds `<current-time>` and `<weather-forecast>`. Cross-component wiring is deliberate but implicit:
 
-- `Statusbar.setDependencies()` reaches out through `this.parentNode.querySelectorAll(".categories ul")` to get the tab panels it drives (`externalRefs.categories`).
-- `Actions.activate(tagName)` looks up `RenderedComponents[tagName]` and calls its `activate()`. `CONFIG.keybindings` maps a key to a **custom element tag name** (default `"s": "search-bar"`), so any component reachable by keybinding must implement `activate()`.
-- Tab switching (click, number keys, wheel) lives entirely in `statusbar.component.js`; `openLastVisitedTab` persists the index to `localStorage.lastVisitedTab`.
+- `Statusbar.setDependencies()` reaches out through `this.parentNode.querySelectorAll(".categories ul")` to get the tab panels it drives (`externalRefs.categories`)
+- `Actions.activate(tagName)` looks up `RenderedComponents[tagName]` and calls its `activate()`. `CONFIG.keybindings` maps a key to a **custom element tag name** (default `"s": "search-bar"`), so any component reachable by keybinding must implement `activate()`
+- Tab switching (click, number keys, wheel) lives entirely in `statusbar.component.js`; `openLastVisitedTab` persists the index to `localStorage.lastVisitedTab`
 
 **Configuration** (`src/common/config.js`)
 
@@ -61,11 +61,11 @@ Styles are template literals that interpolate `CONFIG.palette.*` at render time,
 
 **Palette** (`src/common/palette.js`)
 
-Generated — do not hand-edit. It comes from `templates/palette.tera` via `just build` (catppuccin `whiskers`, version pinned in the template frontmatter). Change the template, not the output. Same rule for `src/css/awoo.min.css`: the source of truth is `awoo-local.min.css`, and `just build-awoo-css` regenerates the CDN variant by prepending the Google Fonts `@import`.
+Generated - do not hand-edit. It comes from `templates/palette.tera` via `just build` (catppuccin `whiskers`, version pinned in the template frontmatter). Change the template, not the output. Same rule for `src/css/awoo.min.css`: the source of truth is `awoo-local.min.css`, and `just build-awoo-css` regenerates the CDN variant by prepending the Google Fonts `@import`.
 
 **Local vs CDN assets**
 
-`CONFIG.localFonts` is the single switch. `Component.localOverrides` remaps `fonts.roboto` / `fonts.nunito` / `fonts.raleway` / `icons.material` / `libs.awoo` to their `*-local` equivalents inside `getResource()`. Note: `localIcons` appears in `userconfig.example.js` and the README but is **not read anywhere in the code** — tabler icons are always served locally.
+`CONFIG.localFonts` is the single switch. `Component.localOverrides` remaps `fonts.roboto` / `fonts.nunito` / `fonts.raleway` / `icons.material` / `libs.awoo` to their `*-local` equivalents inside `getResource()`. Note: `localIcons` appears in `userconfig.example.js` and the README but is **not read anywhere in the code** - tabler icons are always served locally.
 
 **Search** (`src/components/search/`)
 
@@ -77,11 +77,11 @@ Non-standard, percent-free strftime that patches `Date.prototype.strftime(format
 
 **Weather** (`src/components/weather/`)
 
-OpenWeatherMap, `CONFIG.temperature.appId`. With no key the client's URL is `null` and `getWeather()` resolves to `null`, leaving the placeholder — never make the widget throw when the key is absent. Clicking the widget toggles C/F.
+OpenWeatherMap, `CONFIG.temperature.appId`. With no key the client's URL is `null` and `getWeather()` resolves to `null`, leaving the placeholder - never make the widget throw when the key is absent. Clicking the widget toggles C/F.
 
 ## Conventions
 
-- `.editorconfig`: 2-space indent, LF, UTF-8, trim trailing whitespace, 120-column soft limit.
-- Prose in comments, docstrings, and docs uses British spelling (`initialise`, `colour`, `customisable`) — match it.
-- Layout uses awoo's escaped utility classes: `+` (flex centre both axes), `-` (flex, align-centre), `|` (flex, justify-centre), and `!`-prefixed variants for absolute positioning. They look like typos in templates; they are not.
-- Conventional Commits, `<type>(<scope>): <subject>`, imperative and lowercase; branches are `<type>/<short-kebab-description>`. Full type table in `CONTRIBUTING.md`.
+- `.editorconfig`: 2-space indent, LF, UTF-8, trim trailing whitespace, 120-column soft limit
+- Prose in comments, docstrings, and docs uses British spelling (`initialise`, `colour`, `customisable`) - match it
+- Layout uses awoo's escaped utility classes: `+` (flex centre both axes), `-` (flex, align-centre), `|` (flex, justify-centre), and `!`-prefixed variants for absolute positioning. They look like typos in templates; they are not
+- Conventional Commits, `<type>(<scope>): <subject>`, imperative and lowercase; branches are `<type>/<short-kebab-description>`. Full type table in `CONTRIBUTING.md`

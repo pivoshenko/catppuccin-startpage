@@ -1,8 +1,20 @@
 # Contributing
 
+- [Contributing](#contributing)
+  - [Reporting Bugs](#reporting-bugs)
+    - [How to Submit a Bug Report](#how-to-submit-a-bug-report)
+  - [Suggesting Enhancements](#suggesting-enhancements)
+    - [How to Submit an Enhancement](#how-to-submit-an-enhancement)
+  - [Code Contributions](#code-contributions)
+    - [Local Development](#local-development)
+    - [CI/CD](#cicd)
+    - [Branches](#branches)
+    - [Commits](#commits)
+    - [Pull Requests](#pull-requests)
+
 Thank you for taking the time to contribute.
 
-These guidelines keep contributions consistent and easy to review. They are guidance, not hard rules, and maintainers may adapt them when needed.
+These guidelines are intended to make contributions consistent and easy to review across repositories. They are guidance, not hard instructions, and maintainers may adapt them when needed.
 
 ## Reporting Bugs
 
@@ -13,9 +25,9 @@ When opening a bug report, include enough context for someone else to reproduce 
 > [!NOTE]
 > If you find a closed issue that looks similar, open a new issue and link the previous one.
 
-### How To Submit a Bug Report
+### How to Submit a Bug Report
 
-Use the bug issue template and provide the following:
+Open a bug report and provide the following:
 
 - A clear, descriptive title
 - Reproduction steps (minimal and reliable if possible)
@@ -32,9 +44,9 @@ Before submitting an enhancement, check whether a similar request already exists
 
 Enhancement requests can include new features, changes to existing behavior, usability improvements, or performance improvements.
 
-### How To Submit an Enhancement
+### How to Submit an Enhancement
 
-Use the feature request template and provide the following:
+Open a feature request and provide the following:
 
 - A clear problem statement
 - The proposed solution
@@ -47,14 +59,33 @@ Concrete examples, API sketches, UI mockups, or references are helpful when rele
 
 ### Local Development
 
-1. Fork the repository and create a branch for your change.
-2. Set up the project using the repository's README or development docs.
-3. Run the project's tests and quality checks locally before opening a pull request.
+This is a dependency-free, static Catppuccin-themed startpage built from vanilla JS Web Components, so contributing needs only `just`, Python 3 to serve the page locally, and Rust/Cargo to install `whiskers` for regenerating the palette.
 
-When a repository includes helper scripts or task runners, prefer those documented commands.
+This project uses [`just`](https://github.com/casey/just) as its task runner. Run `just --list` for the full set; these are the ones you need day to day:
+
+| Command | What it does |
+| --- | --- |
+| `just` | Lists every available recipe (the default target) |
+| `just install` | Installs the `catppuccin-whiskers` CLI |
+| `just build` | Regenerates the palette source from `templates/palette.tera` using `whiskers` |
+| `just build-awoo-css` | Regenerates `src/css/awoo.min.css` from `src/css/awoo-local.min.css`, prepending the Google Fonts `@import` |
+| `just run-dev-server` | Serves the repository root locally on port 8000 |
+| `just format` | No-op - no formatter is configured for this repo |
+| `just lint` | No-op - no linter is configured for this repo |
+| `just test` | No-op - no tests are configured for this repo |
+| `just check` | Runs `lint`, `test`, and `build` in sequence |
+| `just update` | Re-installs the `catppuccin-whiskers` CLI |
+
+1. Fork this repository and clone your fork locally
+2. Create a branch following the naming convention described in [Branches](#branches)
+3. Run `just check` to verify your changes before opening a pull request
 
 > [!IMPORTANT]
 > Behavioral code changes should include or update tests.
+
+### CI/CD
+
+This repository has no GitHub Actions workflows; run the checks above locally before opening a pull request.
 
 ### Branches
 
@@ -86,10 +117,10 @@ This project follows [Conventional Commits](https://www.conventionalcommits.org/
 [optional body]
 ```
 
-- **type**: one of the prefixes from the table below
-- **scope**: the module, command, or area being changed (e.g. `sync`, `mcps`, `github`, `landing`, `config`); omit when the change is truly cross-cutting
-- **subject**: imperative mood, lowercase, no trailing period, 72 characters or fewer
-- **body**: optional; use it to explain *why*, not *what*; wrap at 72 characters
+- **type** - one of the prefixes from the table below
+- **scope** - the module, command, or area being changed (e.g. `sync`, `mcps`, `github`, `landing`, `config`); omit when the change is truly cross-cutting
+- **subject** - imperative mood, lowercase, no trailing period, 72 characters or fewer
+- **body** - optional; use it to explain *why*, not *what*; wrap at 72 characters
 
 **Type prefixes**
 
