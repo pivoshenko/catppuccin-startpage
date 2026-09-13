@@ -1,3 +1,4 @@
+
 // Catppuccin palette definitions for startpage theming
 // Each palette is a set of named colour values
 const latte = {
@@ -115,3 +116,4 @@ const mocha = {
   mantle: "#181825",
   crust: "#11111b",
 };
+
