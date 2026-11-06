@@ -11,7 +11,7 @@ lint:
     @echo "no linter configured"
 
 test:
-    @echo "no tests configured"
+    @[ -f .no-tests ] && echo "skipping (.no-tests sentinel)" || { echo "no test command, add tests or restore .no-tests" >&2; exit 1; }
 
 check: lint test build
 
